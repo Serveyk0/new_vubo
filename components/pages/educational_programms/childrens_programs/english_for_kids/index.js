@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation } from '../../../../../i18n';
 import { English_for_kids } from './english_for_kids';
 
 English_for_kids.getInitialProps = async () => ({

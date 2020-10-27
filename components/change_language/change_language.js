@@ -11,7 +11,6 @@ export const Change_language = ({ t }) =>
     }, [])
     const [show_languages, set_show_languages] = useState(0);
     const [check_languages, set_check_languages] = useState(0);
-    console.log(typeof i18n.language)
     return (
         <div className="change_language grid">
             <img className="change_language_image" src="./media/language.png" alt={t("language_selection")}

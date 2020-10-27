@@ -1,4 +1,4 @@
-import Mva from '../../components/pages/mva';
+import Mva from '../components/pages/mva';
 
 const _Mva = () => (
     <Mva />

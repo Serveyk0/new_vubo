@@ -32,7 +32,9 @@ import '../styles/education_abroad/spanish_language.sass'
 import '../styles/mva.sass'
 import '../styles/mva/project_management.sass'
 
-const MyApp = ({ Component, pageProps }) => <><Header /><Menu /><Change_language /><Component {...pageProps} /><Footer /></>
+import '../styles/contacts.sass'
+
+const MyApp = ({ Component, pageProps }) => <><Header /><Menu /><Change_language /><div className="wrapper_components"><Component {...pageProps} /></div><Footer /></>
 
 MyApp.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })
 

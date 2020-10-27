@@ -1,0 +1,100 @@
+.burger
+    top: calc(50% - 12px)
+    position: fixed
+    left: 10px
+    z-index: 3
+    cursor: pointer
+    box-sizing: border-box
+    background-clip: content-box !important
+    width: 40px
+    height: 24px
+    border-top: 11px solid transparent
+    border-bottom: 11px solid transparent
+    transition: all .25s ease
+    background: #000
+    transform: rotate(0deg)
+    &::before,
+    &::after
+        content: ""
+        position: absolute
+        height: 2px
+        width: 100%
+        transition: all .8s ease
+        background: #000
+        transform: rotate(0deg)
+    &::before
+        top: -12px
+    &::after
+        top: 10px
+.active
+    background-color: transparent
+    &:after,
+    &:before
+        background-color: #eee
+        width: 110%
+    &:after
+        bottom: 0
+        top: 2px
+        -webkit-transform: rotate(-135deg)
+        transform: rotate(-135deg)
+    &:before
+        top: 0
+        -webkit-transform: rotate(135deg)
+        transform: rotate(135deg)
+
+.menu
+    justify-content: normal
+    color: #ffffff
+    font-weight: 600
+    text-transform: uppercase
+    @media screen and ( max-width: 768px )
+        position: fixed
+        opacity: 0
+        visibility: hidden
+
+        transform-origin: left center
+        transform: scale(0)
+        background-color: #2a3140
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        transition: all .4s ease-in-out
+        grid-template-rows: repeat(2,-webkit-min-content) auto
+        z-index: 2
+    li
+        list-style: none
+    
+        
+.open
+    opacity: .99
+    visibility: visible
+    transform: scale(1)
+    .menu_list
+        margin-left: calc(1% + 40px)
+        @media screen and ( max-width: 768px )
+            grid-gap: 20px
+            grid-template-columns: repeat(auto-fit,minmax(100px,350px))
+        .menu_list_item
+            grid-column-gap: 20px
+            grid-template-columns: 1fr auto
+            p
+                display: grid
+                align-items: center
+                cursor: pointer
+                border: 1px solid hsla(0,0%,100%,.09)
+                padding: 0px 40px
+                height: 60px
+            .menu_sublist
+                display: none
+
+.submenu_block
+    display: block !important
+
+.grid_li
+    grid-template-columns: 1fr 40px
+
+.down_arrow
+    width: 30px
+    &:hover
+        cursor: pointer

@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation } from '../../../../i18n';
 import { Bachelors_and_masters } from './bachelors_and_masters'
 
 Bachelors_and_masters.getInitialProps = async () => ({
