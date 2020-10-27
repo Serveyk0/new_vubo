@@ -1,0 +1,35 @@
+@import "./mixins/mixin_font_size.sass"
+
+.mainText
+    display: grid
+    max-width: 1000px
+    .mainTextTitle
+        text-transform: uppercase
+        text-align: center
+        @include fluidFontSize(15px, 20px, 300px, 1256px, 18px)
+    .educationImage
+        width: 100%
+        max-width: 300px
+        margin: 0 auto
+    p
+        text-align: justify
+    .borderBottom
+        border-color: #000
+    .leftText
+        span
+            display: block
+
+@media screen and (max-width: 767px)
+    .leftText
+        text-align: center
+        span
+            &:first-child
+                text-align: center
+
+@media screen and (min-width: 768px)
+    .educationImage
+        float: right
+        padding: 50px
+    .leftText
+        float: left
+        line-height: 35px

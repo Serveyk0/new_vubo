@@ -34,7 +34,7 @@
         width: 110%
     &:after
         bottom: 0
-        top: 2px
+        top: 1px
         -webkit-transform: rotate(-135deg)
         transform: rotate(-135deg)
     &:before
@@ -42,16 +42,24 @@
         -webkit-transform: rotate(135deg)
         transform: rotate(135deg)
 
+
+
+
+
+
+
+
+
+    
 .menu
     justify-content: normal
     color: #ffffff
     font-weight: 600
     text-transform: uppercase
-    @media screen and ( max-width: 768px )
+    @media screen and ( max-width: 767px )
         position: fixed
         opacity: 0
         visibility: hidden
-
         transform-origin: left center
         transform: scale(0)
         background-color: #2a3140
@@ -62,39 +70,104 @@
         transition: all .4s ease-in-out
         grid-template-rows: repeat(2,-webkit-min-content) auto
         z-index: 2
+    @media screen and ( min-width: 768px )
+        width: 90%
+        margin: 0 auto
     li
         list-style: none
+    .menu_list
+        grid-template-columns: repeat(6,1fr)
+        grid-column-gap: 10px
+        margin: 0
+        padding: 0
+        @media screen and ( max-width: 767px )
+            grid-gap: 20px
+            margin-left: calc(60px + 1%) !important
+            width: calc(95% - (1% + 60px))
+            grid-template-columns: repeat(auto-fit,minmax(100px,350px))
+        .menu_list_item
+            justify-content: normal
+            .first_sublist
+                margin-left: 15px
+                display: none
+                .menu_sublist
+                    margin-top: 10px
+                    justify-content: normal
+                    grid-row-gap: 10px
+                    padding: 0
+                    .second_sublist
+                        display: none
+                        margin-left: 15px
+                        grid-row-gap: 10px
+                        .third_sublist
+                            display: none
+                            margin-left: 15px
+    span
+        display: grid
+        align-items: center
+        font-size: 13px
+        grid-column-gap: 20px
+        cursor: pointer
+        border: 1px solid hsla(0,0%,100%,.09)
+        padding: 0px 20px
+        height: 60px
     
         
 .open
     opacity: .99
     visibility: visible
     transform: scale(1)
-    .menu_list
-        margin-left: calc(1% + 40px)
-        @media screen and ( max-width: 768px )
-            grid-gap: 20px
-            grid-template-columns: repeat(auto-fit,minmax(100px,350px))
-        .menu_list_item
-            grid-column-gap: 20px
-            grid-template-columns: 1fr auto
-            p
-                display: grid
-                align-items: center
-                cursor: pointer
-                border: 1px solid hsla(0,0%,100%,.09)
-                padding: 0px 40px
-                height: 60px
-            .menu_sublist
-                display: none
+
 
 .submenu_block
-    display: block !important
+    @media screen and ( max-width: 767px )
+        display: grid !important
+        height: 100% !important
 
 .grid_li
-    grid-template-columns: 1fr 40px
+    justify-content: normal
+
+.menu_sublist
+    margin-top: 10px
+    justify-content: normal
+    grid-row-gap: 10px
+    padding: 0
 
 .down_arrow
+    margin: 0 auto
     width: 30px
+    outline: none
+    &:active
+        outline: none
     &:hover
         cursor: pointer
+    @media screen and ( min-width: 768px )
+        display: none
+        
+
+
+
+
+
+.third_sublist
+    display: none
+    margin-left: 15px
+
+.menu_list_item_href_wrapper
+    @media screen and ( min-width: 768px )    
+        height: 40px
+        padding: 0
+        width: 100%
+        border: 2px solid #eeddcf
+        color: #988779
+        background-color: #f0f8ff
+        grid-area: 1/1
+        display: flex
+        justify-content: center
+        align-items: center
+    @media screen and ( max-width: 767px )
+        grid-template-columns: 1fr 40px
+
+
+.memu_wrapper
+    margin-top: 10px

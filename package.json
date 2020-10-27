@@ -16,12 +16,15 @@
     "image-webpack-loader": "^7.0.1"
   },
   "dependencies": {
+    "hyphenated": "^1.2.0",
+    "hyphenated-ru": "^1.2.0",
     "i18next": "^14.0.1",
     "next": "^9.5.4",
     "next-i18next": "^6.0.3",
     "next-images": "^1.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hyphen": "^1.4.0",
     "sass": "^1.27.0",
     "url-loader": "^4.1.1"
   }
