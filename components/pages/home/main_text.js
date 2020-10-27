@@ -1,4 +1,3 @@
-
 export const Main_text = ({ t }) =>
 {
     return (
