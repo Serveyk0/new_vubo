@@ -92,11 +92,15 @@
             .first_sublist
                 margin-left: 15px
                 display: none
+                position: relative
+                z-index: 2
                 .menu_sublist
+                    width: 100%
                     margin-top: 10px
                     justify-content: normal
                     grid-row-gap: 10px
                     padding: 0
+                    position: absolute
                     .second_sublist
                         display: none
                         margin-left: 15px
@@ -104,6 +108,12 @@
                         .third_sublist
                             display: none
                             margin-left: 15px
+            
+            &:hover
+                .first_sublist
+                    display: grid !important
+                .first_sub
+                    background-color: #eeddcf
     span
         display: grid
         align-items: center
@@ -112,6 +122,7 @@
         cursor: pointer
         border: 1px solid hsla(0,0%,100%,.09)
         padding: 0px 20px
+        width: 100%
         height: 60px
     
         
@@ -128,7 +139,7 @@
 
 .grid_li
     justify-content: normal
-
+    
 .menu_sublist
     margin-top: 10px
     justify-content: normal
@@ -147,8 +158,15 @@
         display: none
         
 
-
-
+.second_sub
+    &:hover
+        .third_sublist
+            display: grid !important
+        .second_sub_how
+            background-color: #eeddcf
+    .third_sub_how
+        &:hover
+            background-color: #eeddcf
 
 
 .third_sublist
@@ -174,3 +192,7 @@
 .menu_wrapper
     margin-top: 10px
     margin-bottom: 10px
+
+
+.active_menu
+    background-color: #eeddcf

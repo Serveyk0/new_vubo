@@ -1,0 +1,73 @@
+@import "./mixins/mixin_font_size.sass"
+.mva
+    display: grid
+    justify-content: center
+    align-items: center
+    grid-row-gap: 50px
+    grid-column-gap: 50px
+    margin-top: 50px
+    margin-bottom: 50px
+    grid-template-columns: repeat(auto-fit,minmax(150px,250px))
+
+.mvaPagesHrefItem 
+    display: inline-block
+    max-height: 200px
+    position: relative
+    cursor: pointer
+    &:hover
+        animation-duration: 2s
+        animation-name: scale
+    .dummy 
+        margin-top: 100% 
+    .mvaPagesHrefItemText 
+        position: absolute
+        cursor: pointer
+        text-transform: uppercase
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+        color: white
+        @include fluidFontSize(20px, 30px, 300px, 1920px, 18px)
+        font-weight: bolder  
+
+
+.mvaPagesHrefItemBack 
+    width: 100%
+    position: absolute
+    filter: brightness(0.4)
+    height: 100% 
+
+.mvaHref 
+    display: grid
+    justify-content: center
+    align-items: center
+    grid-row-gap: 50px
+    grid-column-gap: 50px
+    margin-top: 50px
+    margin-bottom: 50px
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px)) 
+
+
+@media screen and (min-width: 768px) and (max-width: 1333px) 
+    .mvaHrefItem 
+        &:nth-child(3n) 
+            max-width: 250px
+            width: 100%
+            height: 100%
+            grid-column-start: 1
+            grid-column-end: 3
+            margin: 0 auto   
+
+
+
+
+@keyframes scale 
+    0%  
+        transform: scale(1)   
+    100%  
+        transform: scale(1.1)  
