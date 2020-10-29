@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { contacts } from './constants';
+import ModalWindow from './modal_window';
 
 
 export const phone = '093-963-11-81';
@@ -29,40 +30,46 @@ export const Contacts = ({ t }) => {
         const [surname, set_surname] = useState(''); 
         const [email, set_email] = useState(''); 
         const [phone, set_phone] = useState(''); 
-        const [mailText, set_mailText] = useState(''); 
-        const [regStatus, set_regStatus] = useState(false),
-   
+        const [text, set_text] = useState(''); 
+        const [regStatus, set_regStatus] = useState(false);
+        const [show_modal, set_show_modal] = useState(false);
 
-    handleChange = (e, set) => {
+    const handleChange = (e, set) => {
         set(e.target.value);
     }
 
+    const handleSubmit = async (e) => {
+        let xhr = new XMLHttpRequest;
+        xhr.addEventListener('load', () => {
+            console.log(xhr.responseText);
+        });
 
-    handleSubmit = async (e) => {
+        // http://serveyko-portfolio.zzz.com.ua/api.portfolio.com/index.php?name=
+        xhr.open('GET', 'http://localhost/api.vubo.com/index.php?name=' + name
+            + '&surname=' + surname
+            + '&email=' + email
+            + '&phone=' + phone
+            + '&text=' + text);
+        xhr.send();
         e.preventDefault();
-        const { name, surname, email, phone, mailText } = this.state;
-        let host = window.location.hostname; 
-        let protocol = window.location.protocol 
-        let url = null 
-        if (host === "localhost") { 
-            url = protocol + "//" + host + ":9000" 
-            } else { 
-            url = protocol + "//" + host 
-            } 
+        set_show_modal(1);
+        set_name("");
+        set_surname("");
+        set_email("");
+        set_phone("");
+        set_text("");
 
-        this.setState({name: '', surname: '', email: '', phone: '', mailText: ''});
-        setTimeout( () => (set_regStatus(true)), 1000);
-        await axios.post(url + "/registrationMessage", { name, surname, email, phone, mailText })
     }
     return (
         <div className="contacts"> 
+        {show_modal ? <ModalWindow t={t} set_show_modal={set_show_modal} /> : ""}
         <div className='contactsName'>
 				{contacts.map((item, index) => { return ( 
 					<div key={index} className='contact'>
-						<img className='adminImage' alt={item.imageAlt} src={item.image} />
-						<p className='name'>{t(item.name)}</p>
-						<p className='profession'>{t(item.profession)}</p>
-						<p className='contacts'>{t(item.phone)}</p>
+						<img className='adminImage' alt={item} src={"./media/" + item + ".jpg"} />
+						<p className='name'>{t(item + "_name")}</p>
+						<p className='profession'>{t(item + "_profession")}</p>
+						<p className='contacts'>{t(item + "_phone")}</p>
 					</div>
 				)})}
 			</div>
@@ -71,9 +78,9 @@ export const Contacts = ({ t }) => {
         </div>
 				<div className="addressFormBlock">
                 <div className='address'>
-                <h3>{t('contacts.address')}</h3>
+                <h3>{t('contacts_address')}</h3>
                 <div className='addressData'>
-                    <p>{t(city)}</p>
+                    <p>{t("contacts_address")}</p>
                     <p>{t(prospect)}</p>
                     <p>{t(metro)}</p>
                     <p><span className='bold'>{t(hoursWord)}</span>{phone}</p>
@@ -82,16 +89,16 @@ export const Contacts = ({ t }) => {
                 </div>
             </div>
             <div>
-                { regStatus ?  <RegisterStatus t={t} closeRegisterStatus={this.closeRegisterStatus} /> : null }
-                <h1 className='contactsFormTitle'>{t('contacts.reverse.form')}</h1>
-                <form id='telegramForm' className='feedback' encType="application/x-www-form-urlencoded" onSubmit={this.handleSubmit} method='POST'>
+                { regStatus ?  <RegisterStatus t={t} closeRegisterStatus={closeRegisterStatus()} /> : null }
+                <h1 className='contactsFormTitle'>{t('contacts_reverse_form')}</h1>
+                <div id='telegramForm' className='feedback'>
                     <p className='formText'>{t(nameWord)}</p><input className='contactsInput' name='name' value={name} placeholder={name} onChange={() => handleChange(e, set_name)} />
                     <p className='formText'>{t(surnameWord)}</p><input className='contactsInput' name='surname' value={surname} placeholder={surname} onChange={() => handleChange(e, set_surname)} />
                     <p className='formText'>{emailFormWord}</p><input className='contactsInput' name='email' value={email} placeholder={email} onChange={() => handleChange(e, set_email)} />
                     <p className='formText'>{t(phoneFormWord)}</p><input className='contactsInput' name='phone' value={phone} placeholder={phone} onChange={() => handleChange(e, set_phone)} />
-                    <p className='formText'>{t(textWord)}</p><textarea className='contactsInput textareaInput' value={mailText} name='mailText' placeholder={mailText} onChange={() => handleChange(e, set_mailText)} ></textarea>
-                    <input className='btn' type='submit' value={t(send)} />
-                </form>
+                    <p className='formText'>{t(textWord)}</p><textarea className='contactsInput textareaInput' value={text} name='mailText' placeholder={text} onChange={() => handleChange(e, set_text)} ></textarea>
+                    <button className='btn' onClick={handleSubmit}>{t(send)}</button>
+                </div>
             </div>
 				</div>  
         </div>
