@@ -1,0 +1,174 @@
+@import "../mixins/mixin_images.sass"
+@import "../mixins/mixin_font_size.sass"
+
+.projectManagementTitles 
+    text-align: center
+    color: black
+    margin: 0 auto
+    width: auto 
+.border 
+    border-bottom: 1px solid
+    width: 90%
+    margin: 15px auto 0 auto 
+
+.projectManagementMainText 
+    // @include background-image("/educationAbroad/IT/softwareEngineering.jpg", center, transparent, cover)
+    max-width: 700px
+    line-height: 2
+    margin: 0 auto
+    .projectManagementMainTextIpz 
+        // backdrop-filter: brightness(.3)
+        color: black
+        @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)
+        text-align: justify  
+
+@media screen and ( max-width: 768px ) 
+    .projectManagementMainTextIpz 
+        padding: 20px 10px 20px 10px  
+
+@media screen and ( min-width: 768px ) 
+    .projectManagementMainTextIpz 
+        padding: 20px 50px 20px 50px  
+
+
+.advantageTitle 
+    text-align: center
+    color: black 
+
+.AdvantagesPM 
+    text-align: justify
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(auto, 250px))
+    grid-column-gap: 40px
+    align-items: center
+    justify-content: center
+    div 
+        display: grid
+        img 
+            margin: 0 auto 
+        h3 
+            width: max-content
+            margin: 0 auto
+            text-align: center
+            color: black 
+        .border 
+            border-bottom: 1px solid
+            width: 90%
+            margin: 15px auto 0 auto   
+
+.PM_Block 
+    padding-top: 40px
+    display: grid
+    justify-content: center
+    align-items: center
+    grid-column-gap: 50px
+    grid-row-gap: 20px
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto)) 
+.pmText 
+    display: grid
+    grid-template-rows: 40px auto
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+    justify-content: center
+    align-items: center
+    img 
+        max-width: 40px
+        margin: auto 
+    p 
+        text-align: center
+        margin: 0
+        @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)  
+
+@media screen and (min-width: 769px) 
+    .pmText 
+        grid-template-rows: none !important
+        grid-template-columns: 40px auto
+        justify-content: start !important  
+
+.dateOfDeadline 
+    display: grid
+    grid-template-columns: 50% 50%
+    p 
+        text-align: center
+        @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)
+        &:nth-child(2n-1) 
+            width: auto
+            text-align: center   
+
+.Disciplines 
+    margin: 0 auto 30px auto
+    display: grid
+    justify-content: center
+    grid-template-columns: 100%
+    grid-row-gap: 20px
+    align-items: center
+    grid-template-rows: repeat(5, min-content) 
+
+.disciplinesBlock 
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto))
+    grid-row-gap: 20px
+    grid-column-gap: 50px
+    .disciplinesText 
+        display: grid
+        grid-template-rows: 40px auto
+        grid-column-gap: 20px
+        grid-row-gap: 20px
+        justify-content: center
+        align-items: center
+        img 
+            max-width: 40px
+            margin: auto 
+        p 
+            text-align: center
+            margin: 0
+            @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)   
+
+.disciplinesTitle 
+    text-align: center
+    color: black 
+
+@media screen and (min-width: 769px) 
+    .disciplinesText 
+        grid-template-rows: none !important
+        grid-template-columns: 40px auto
+        justify-content: start !important  
+
+.certeficationProgram 
+    display: grid
+    img 
+        margin: 0 auto 
+    p 
+        text-align: center
+        @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)  
+
+.SkillsPM 
+    display: grid
+    justify-content: center
+    align-items: center
+    grid-row-gap: 20px
+    grid-template-rows: repeat(5, min-content)
+    div 
+        display: grid
+        align-items: center
+        img 
+            max-width: 40px
+            margin: 0 auto 
+        h3 
+            margin: 10px
+            color: black 
+        p 
+            margin: 10px
+            text-align: justify
+            @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)   
+
+
+@media screen and (max-width: 768px) 
+    .SkillsPM 
+        div 
+            h3 
+                text-align: center    
+@media screen and (min-width: 769px) 
+    .SkillsPM 
+        div 
+            grid-template-columns: 50px 150px auto   

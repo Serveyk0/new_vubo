@@ -12,8 +12,8 @@ export const Change_language = ({ t }) =>
     const [show_languages, set_show_languages] = useState(0);
     const [check_languages, set_check_languages] = useState(0);
     return (
-        <div className="change_language grid">
-            <img className="change_language_image" src="./media/language.png" alt={t("language_selection")}
+        <div className={"change_language grid " + (show_languages ? "change_language_active" : "")}>
+            <img className={"change_language_image "+ (show_languages ? "change_language_image_active" : "")} src="./media/language.png" alt={t("language_selection")}
             onClick={ () => set_show_languages(!show_languages) } />
             <div className={(show_languages ? "language_block" : "") + " change_language_wrapper"}>
                 <p className="language_title margin_0 padding_0">{t("language_selection")}</p>
