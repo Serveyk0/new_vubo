@@ -1,0 +1,80 @@
+@import "../mixins/mixin_font_size.sass"
+@import "../mixins/mixin_images"
+
+.distanceLearningTitle
+    text-align: center
+
+.Master__And__Bachelor 
+    display: grid
+    width: 75%
+    margin: 0 auto
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px))
+    grid-gap: 30px
+    justify-content: center
+    text-align: justify
+    
+    .hrefItem 
+        display: grid
+        grid-template-rows: min-content auto min-content
+        align-items: start
+        img 
+            width: 100% 
+            max-height: 100px
+        button 
+            width: 100%
+            max-width: 300px
+            margin: 0 auto
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            padding: 10px 0
+            filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1))
+            -webkit-transition: all .5s ease
+            filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1))
+            transition: all .5s ease
+            border: none
+            background: #FFD800
+            border-radius: 30px
+            text-transform: uppercase
+            box-sizing: border-box
+            font-weight: 400
+            font-size: 11px
+            border: 2px solid #dac030
+            @include fluidFontSize(15px, 20px, 320px, 1920px, 18px) 
+            &:hover
+                cursor: pointer
+                transform: scale(1.02)
+        p 
+            @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)   
+
+
+
+.distanceAdvantage 
+    width: 75%
+    margin: 0 auto 30px auto
+    .distanceAdvantageTitle,
+    .distanceAdvantageText 
+        display: grid
+        grid-template-columns: minmax(30px, 50px) auto
+        grid-column-gap: 20px
+        align-items: center
+        img 
+            width: 100%
+            max-width: 40px 
+        p 
+            text-align: justify  
+    .distanceAdvantageText 
+        margin: 0 auto
+        width: 100%
+        p 
+            @include fluidFontSize(13px, 16px, 320px, 1920px, 15px)  
+    .distanceAdvantageTitle 
+        display: flex
+        justify-content: center
+        width: auto
+        text-align: center
+        grid-template-columns: 1fr 1fr
+        h2 
+            @include fluidFontSize(25px, 35px, 320px, 1920px, 18px) 
+        img 
+            padding-right: 25px   

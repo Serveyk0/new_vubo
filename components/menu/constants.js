@@ -23,17 +23,17 @@ export const main =
         sublist: 
         [
             {
-                name: "bachelors"
-            },
-            {
-                name: "masters"
+                name: "spanish_language"
             },
             {
                 name: "distance_education"
             },
             {
-                name: "spanish_language"
-            }
+                name: "bachelors"
+            },
+            {
+                name: "masters"
+            },
         ]
     },
     {

@@ -1,0 +1,86 @@
+@import "../mixins/mixin_font_size.sass"
+@import "../mixins/mixin_images"
+
+    
+.wrapperIpz 
+    margin-bottom: 50px
+    padding: 50px 0 20px 0 
+
+.shadowWrapp 
+    width: 100%
+    color: black
+    display: grid
+    justify-content: center
+    align-items: center 
+
+.wrapperWidth 
+    width: 75%
+    margin: 30px auto 40px auto 
+
+.ITAdvantage 
+    width: 100%
+    margin: 0 auto 30px auto
+    display: block
+    justify-content: center
+    align-items: center 
+.ITAdvantageTitle,
+.ITAdvantageText 
+    display: grid
+    grid-template-columns: minmax(30px, 50px) auto
+    grid-column-gap: 20px
+    align-items: center
+    img 
+        width: 100%
+        max-width: 40px 
+    p 
+        text-align: justify  
+.ITAdvantageText 
+    margin: 0 auto
+    margin: 0 auto
+    width: 100%
+    p 
+        @include fluidFontSize(13px, 16px, 320px, 1920px, 15px)  
+.ITAdvantageTitle 
+    margin-bottom: 20px
+    display: flex
+    justify-content: center
+    width: auto
+    text-align: -webkit-right
+    grid-template-columns: 1fr 1fr
+    h2 
+        @include fluidFontSize(15px, 25px, 320px, 1920px, 30px)
+        color: #000000
+        text-align: center 
+    img 
+        padding-right: 25px  
+
+
+@media screen and (min-width: 769px) 
+    .ITAdvantage 
+        width: 90%
+        .ITAdvantageTitle,
+        .ITAdvantageText 
+            width: 75%
+            margin: 0 auto  
+    .shadowWrapp 
+        .ITAdvantageText 
+            &:last-child 
+                padding-bottom: 50px  
+        .ITAdvantageTitle 
+            padding-top: 30px
+            h2 
+                color: #ffffff   
+    .wrapperIpz 
+        background-color: #ffffffb5 
+    .ITAdvantage 
+        &:nth-child(1) 
+            @include background-image("softwareEngineering.jpg", center, transparent, cover) 
+        &:nth-child(2) 
+            @include background-image("programmingLanguages.jpg", center, transparent, cover) 
+        &:nth-child(3) 
+            @include background-image("educationalProgram.jpg", center, transparent, cover)
+        min-height: 500px
+        .shadowWrapp 
+            min-height: 500px
+            backdrop-filter: brightness(.4)
+            color: white   
