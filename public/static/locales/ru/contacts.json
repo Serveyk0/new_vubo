@@ -1,0 +1,19 @@
+{
+    "oksana_name": "Оксана",
+    "oksana_profession": "Ректор",
+    "oksana_phone": "+1234567890",
+    "contacts_address": "Адрес",
+    "contacts_prospect": "Голосеевский проспект",
+    "contacts_metro": "Метро Голосеевская",
+    "contacts_hours": "Часы работы",
+    "contacts_phone": "Тел",
+    "contacts_mail": "Почта: openbusinessedu@gmail.com",
+    "contacts_reverse_form": "Обратная форма связи",
+    "contact_form_name": "ИМЯ",
+    "contact_form_surname": "ФАМИЛИЯ",
+    "contact_form_phone": "ТЕЛЕФОН",
+    "contact_form_text": "ТЕКСТ",
+    "contact_form_send": "Отправить",
+    "modal_title": "Отправка формы",
+    "modal_text": "Ваше сообщение отправлено администрация свяжется с Вами в ближайшее время"
+}

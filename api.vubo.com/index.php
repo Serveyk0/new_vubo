@@ -51,7 +51,7 @@ $resp = file_get_contents("https://api.telegram.org/bot{$botApiToken}/sendMessag
 
             $mail->isHTML(true);   
             $mail->Subject = 'Contact form';
-            $body = 'Имя: ' . $name . "<br>Surname: " . $surname . "<br>Email: " . ( strcasecmp($phone, "") ? ("<br>Телефон: " . $phone) : "") . "<br><br>" . $text;
+            $body = 'Имя: ' . $name . "<br>Фамилия: " . $surname . "<br>Email: " . ( strcasecmp($phone, "") ? ("<br>Телефон: " . $phone) : "") . "<br><br>" . $text;
             $mail->Body    = $body;
 
             if($mail->send()){

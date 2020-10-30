@@ -1,0 +1,22 @@
+{
+    "bachelors": "Bachelor",
+    "masters": "Masters",
+    "title1": "Software engineering",
+    "title2": "During distance learning students learn:",
+    "title3": "EDUCATIONAL PROGRAM PLAN:",
+    "bachelor_small": "Bachelor",
+    "four": "Duration: 4 YEARS",
+    "diploma": "AT THE COMPLETION OF THE PROGRAM, THE STUDENT RECEIVES A BACHELOR'S DEGREE IN SOFTWARE ENGINEERING",
+    "qualification": "RECEIVES QUALIFICATION: SOFTWARE ENGINEER",
+    "programming": "The structure of the curriculum provides general courses and possible specializations in selected areas for in-depth study of individual languages ​​and programming tools",
+    "languages": "PROGRAMMING LANGUAGES: JAVA, C #, C ++, QT, PHP, JS",
+    "technologys": "TECHNOLOGIES AND SOFTWARE DEVELOPMENT TOOLS: ASP.NET, XAMARIN, QTCREATOR, REACT NATIVE",
+    "systems": "DATABASE MANAGEMENT SYSTEMS: MS SQL, MYSQL, POSTGRESQL",
+    "plan": "PLAN OF THE EDUCATIONAL PROGRAM:",
+    "registration": "Student registers on the university platform, the student receives a login and password access to the personal account",
+    "cabinet": "Student receives login and password access to personal account",
+    "schedule2": "In the student's personal account there is: a schedule of the educational process for the whole period of study, a schedule of online consultations of teachers and a course of video lectures and practical tasks for independent work",
+    "consultation": "The student is given the opportunity to consult with the teacher during the practical work",
+    "mark": "After completing the practical work the student receives points for the work",
+    "test": "Final control is carried out in the form of online test and online defense of final practical work"
+}
