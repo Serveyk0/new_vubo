@@ -79,8 +79,8 @@ export const Menu = ({ t }) => {
                             <div className="grid_li grid" key={index}>
                                 <li className="menu_list_item grid">
                                     
-                                        <div className={"menu_list_item_href_wrapper first_sub grid " + (index === active_first_menu ? "active_menu" : "")}>
-                                        <Link className="menu_list_item_href" href={item.name === "main" ? "/" : item.name} onClick={() => set_show_menu(0)}><span onClick={() => click_menu(index, -1, -1)}>{t(item.name)}</span></Link>
+                                        <div className="menu_list_item_href_wrapper first_sub grid ">
+                                        <Link className="menu_list_item_href" href={item.name === "main" ? "/" : item.name} onClick={() => set_show_menu(0)}><span className={(index === active_first_menu ? "active_menu" : "")} onClick={() => click_menu(index, -1, -1)}>{t(item.name)}</span></Link>
                                         {item.hasOwnProperty("sublist") ? <img className="down_arrow" alt={t(item.name)} src="./media/down.png" onClick={() => { set_click_submenu(click_submenu === index ? -1 : index) }} /> : ""}
                                         </div>
                                     {
@@ -91,8 +91,8 @@ export const Menu = ({ t }) => {
                                                         <div className="grid_li" key={index2}>
                                                             <li className="menu_list_item second_sub">
                                                                 
-                                                                <div className={"menu_list_item_href_wrapper second_sub_how grid " + (index === active_first_menu && index2 === active_second_menu ? "active_menu" : "")}>
-                                                                <Link className="menu_list_item_href" href={item2.name} onClick={() => set_show_menu(0)}><span onClick={() => click_menu(index, index2, -1)}>{t(item2.name)}</span></Link>
+                                                                <div className="menu_list_item_href_wrapper second_sub_how grid ">
+                                                                <Link className="menu_list_item_href" href={item2.name} onClick={() => set_show_menu(0)}><span className={(index === active_first_menu && index2 === active_second_menu ? "active_menu" : "")} onClick={() => click_menu(index, index2, -1)}>{t(item2.name)}</span></Link>
                                                                     {item2.hasOwnProperty("sublist") ? <img className="down_arrow" alt={t(item.name)} src="./media/down.png" onClick={() => { set_click_second_submenu(click_second_submenu === index2 ? -1 : index2) }} /> : ""}
                                                                     </div>
                                                                 {
@@ -101,8 +101,8 @@ export const Menu = ({ t }) => {
                                                                             {item2.sublist.map((item3, index3) =>
                                                                                 <li className="menu_list_item" key={index3}>
                                                                                     
-                                                                <div className={"menu_list_item_href_wrapper third_sub_how grid " + (index === active_first_menu && index2 === active_second_menu && index3 === active_third_menu ? "active_menu" : "")}>
-                                                                <Link className="menu_list_item_href" href={item3.name} onClick={() => set_show_menu(0)}><span onClick={() => click_menu(index, index2, index3)}>{t(item3.name)}</span></Link>
+                                                                <div className="menu_list_item_href_wrapper third_sub_how grid ">
+                                                                <Link className="menu_list_item_href" href={item3.name} onClick={() => set_show_menu(0)}><span className={(index === active_first_menu && index2 === active_second_menu && index3 === active_third_menu ? "active_menu" : "")} onClick={() => click_menu(index, index2, index3)}>{t(item3.name)}</span></Link>
                                                                     </div>
                                                                                 </li>
                                                                             )}
