@@ -45,7 +45,7 @@ export const Contacts = ({ t }) => {
         });
 
         // http://serveyko-portfolio.zzz.com.ua/api.portfolio.com/index.php?name=
-        xhr.open('GET', 'http://localhost/api.vubo.com/index.php?name=' + name
+        xhr.open('GET', 'http://serveyko.zzz.com.ua/api.vubo.com/index.php?name=' + name
             + '&surname=' + surname
             + '&email=' + email
             + '&phone=' + phone
