@@ -12,25 +12,25 @@ export const Registration = (props) =>
 
     const registrationFrom = [
         {
-            'name' : 'name',
+            'name1' : 'name',
             'type' : 'text',
             name: name,
             set: set_name
         },
         {
-            'name' : 'surname',
+            'name1' : 'surname',
             'type' : 'text',
             name: surname,
             set: set_surname
         },
         {
-            'name' : 'phone',
+            'name1' : 'phone',
             'type' : 'text',
             name: phone,
             set: set_phone
         },
         {
-            'name' : 'email',
+            'name1' : 'email',
             'type' : 'text',
             name: email,
             set: set_email
@@ -71,9 +71,9 @@ const handleSubmit = async (e) => {
         <div className='contactForm'>
             <h1 className='registrationTitle'>{t("title_form")}</h1>
             {registrationFrom.map((registrationItem, registrationIndex) => { return (
-                <div className='inputBlock' key={registrationIndex}><input className='formInput' type={registrationItem.type} value={registrationItem.name} onChange={() => handleChange(e, set)} placeholder={t('registration_user_' + registrationItem.name)} /></div>
+                <div className='inputBlock' key={registrationIndex}><input className='formInput' type={registrationItem.type} value={registrationItem.name} onChange={() => handleChange(e, set)} placeholder={t('registration_user_' + registrationItem.name1)} /></div>
             )})}
-            <button onClick={handleSubmit}>{t('registration_user_register')}</button>
+            <button className="registerButt" onClick={handleSubmit}>{t('registration_user_register')}</button>
         </div>            
     </section>
     )

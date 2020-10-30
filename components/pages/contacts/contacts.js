@@ -58,7 +58,6 @@ export const Contacts = ({ t }) => {
         set_email("");
         set_phone("");
         set_text("");
-
     }
     return (
         <div className="contacts"> 

@@ -36,7 +36,7 @@ $resp = file_get_contents("https://api.telegram.org/bot{$botApiToken}/sendMessag
 
         $mail = new PHPMailer(true);
         try{
-            $text = 'Имя: ' . $name . '\nФамилия: ' . $surname . "\nEmail: " . $email . "\nТелефон: " . $phone . "\n\n" . $text;
+            $text = 'Имя: ' . $name . "\nФамилия: " . $surname . "\nEmail: " . $email . ( strcasecmp($phone, "") ? ("\nТелефон: " . $phone) : "") . "\n\nПовідомлення: " . $text;
             echo message_to_telegram($text);
             $mail->isSMTP();                                     
             $mail->Host       = 'smtp.gmail.com';                
@@ -51,7 +51,7 @@ $resp = file_get_contents("https://api.telegram.org/bot{$botApiToken}/sendMessag
 
             $mail->isHTML(true);   
             $mail->Subject = 'Contact form';
-            $body = 'Имя: ' . $name . "<br>Surname: " . $surname . "<br>Email: " . $email . "<br>Телефон: " . $phone . "<br><br>" . $text;
+            $body = 'Имя: ' . $name . "<br>Surname: " . $surname . "<br>Email: " . ( strcasecmp($phone, "") ? ("<br>Телефон: " . $phone) : "") . "<br><br>" . $text;
             $mail->Body    = $body;
 
             if($mail->send()){

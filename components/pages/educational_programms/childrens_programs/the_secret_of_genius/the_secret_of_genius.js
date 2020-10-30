@@ -12,9 +12,10 @@ export const The_secret_of_genius = ({ t }) =>
             {show_modal ? <Registration t={t} set_show_modal={set_show_modal} /> : ""}
             <h2 className="the_secret_of_genius_title blue text_center">{t("title")}</h2>
             <p className="about_methodology blue text_center">{t("about")}</p>
+            
+            <div className="the_secret_of_genius_block grid">
+                <div>
             <img className="the_secret_of_genius_images" src="./media/наташка сайт.jpg" alt={t("title")} />
-            <div className="the_secret_of_genius_block">
-                
                 <p>
                     <span className="bold italic">{"«" + t("title") + "»"}</span>
                     {t("unique")}
@@ -31,6 +32,8 @@ export const The_secret_of_genius = ({ t }) =>
                     <span className="bold">{t("attention")}</span>
                     {t("10_percent")}
                 </p>
+                </div>
+                <div>
                 <p>
                     <span className="bold">{t("developing")}</span>
                     {
@@ -56,8 +59,10 @@ export const The_secret_of_genius = ({ t }) =>
                         second_li.map((item, index) => <li key={index} className="li_dot">{t(item)}</li>)
                     }
                 </p>
-            </div>
+                </div>
             <button className="register_button" onClick={() => set_show_modal(1)}>{t("registration")}</button>
+
+            </div>
         </div>
     )
 }

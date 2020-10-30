@@ -19,7 +19,7 @@ export const Change_language = ({ t }) =>
                 <p className="language_title margin_0 padding_0">{t("language_selection")}</p>
                 <ul className="change_language_languages grid margin_0 padding_0">
                     {languages.map((item, index) => <li className={"language " + ((check_languages === index) ? "active_language" : "")} key={index} 
-                    onClick={() => {i18n.changeLanguage(item.change_language); set_check_languages(index)}}>{t(item.language)}</li>)}
+                    onClick={() => {i18n.changeLanguage(item.change_language); set_check_languages(index); set_show_languages(0)}}>{t(item.language)}</li>)}
                 </ul>
             </div>
         </div>
