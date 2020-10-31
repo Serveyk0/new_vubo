@@ -4,23 +4,22 @@
 .distanceLearningTitle
     text-align: center
 
-.Master__And__Bachelor 
+.Master__And__Bachelor
     display: grid
-    width: 75%
     margin: 0 auto
     grid-template-columns: repeat(auto-fit, minmax(150px, 250px))
     grid-gap: 30px
     justify-content: center
     text-align: justify
-    
-    .hrefItem 
+
+    .hrefItem
         display: grid
         grid-template-rows: min-content auto min-content
         align-items: start
-        img 
-            width: 100% 
+        img
+            width: 100%
             max-height: 100px
-        button 
+        button
             width: 100%
             max-width: 300px
             margin: 0 auto
@@ -40,41 +39,38 @@
             font-weight: 400
             font-size: 11px
             border: 2px solid #dac030
-            @include fluidFontSize(15px, 20px, 320px, 1920px, 18px) 
+            @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)
             &:hover
                 cursor: pointer
                 transform: scale(1.02)
-        p 
-            @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)   
+        p
+            @include fluidFontSize(15px, 20px, 320px, 1920px, 18px)
 
-
-
-.distanceAdvantage 
-    width: 75%
+.distanceAdvantage
     margin: 0 auto 30px auto
     .distanceAdvantageTitle,
-    .distanceAdvantageText 
+    .distanceAdvantageText
         display: grid
         grid-template-columns: minmax(30px, 50px) auto
         grid-column-gap: 20px
         align-items: center
-        img 
+        img
             width: 100%
-            max-width: 40px 
-        p 
-            text-align: justify  
-    .distanceAdvantageText 
+            max-width: 40px
+        p
+            text-align: justify
+    .distanceAdvantageText
         margin: 0 auto
         width: 100%
-        p 
-            @include fluidFontSize(13px, 16px, 320px, 1920px, 15px)  
-    .distanceAdvantageTitle 
+        p
+            @include fluidFontSize(13px, 16px, 320px, 1920px, 15px)
+    .distanceAdvantageTitle
         display: flex
         justify-content: center
         width: auto
         text-align: center
         grid-template-columns: 1fr 1fr
-        h2 
-            @include fluidFontSize(25px, 35px, 320px, 1920px, 18px) 
-        img 
-            padding-right: 25px   
+        h2
+            @include fluidFontSize(25px, 35px, 320px, 1920px, 18px)
+        img
+            padding-right: 25px

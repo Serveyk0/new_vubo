@@ -137,10 +137,11 @@
     
         
 .open
-    opacity: .99
-    visibility: visible
-    transform: scale(1)
-
+    @media screen and ( max-width: 768px )
+        opacity: .99
+        visibility: visible
+        transform: scale(1)
+        
 
 .submenu_block
     @media screen and ( max-width: 767px )
@@ -207,3 +208,6 @@
 
 .active_menu
     background-color: #eeddcf
+    @media screen and ( max-width: 768px )
+        background-color: #2b426b
+        

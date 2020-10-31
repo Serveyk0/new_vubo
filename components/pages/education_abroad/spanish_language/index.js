@@ -1,7 +1,7 @@
 import { withTranslation } from '../../../../i18n';
 import { Spanish_language } from './spanish_language'
 
-Spanish_language.getInitialProps = async () => ({
+Spanish_language.getStaticProps = async () => ({
   namespacesRequired: ['education_abroad/spanish_language'],
 })
 

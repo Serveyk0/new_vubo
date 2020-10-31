@@ -1,7 +1,7 @@
 import { withTranslation } from '../../../i18n';
 import { Home } from './home'
 
-Home.getInitialProps = async () => ({
+Home.getStaticProps = async () => ({
   namespacesRequired: ['home'],
 })
 

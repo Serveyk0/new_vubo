@@ -1,12 +1,12 @@
 @import "./mixins/mixin_font_size"
 @import "./mixins/mixin_images"
 
-.fa-telegram
-  @include background-image("telegram.png", center, transparent, contain)
-.fa-instagram
-  @include background-image("instagram.png", center, transparent, contain)
-.fa-facebook
-  @include background-image("facebook.png", center, transparent, contain)
+// .fa-telegram
+//   @include background-image("telegram.png", center, transparent, contain)
+// .fa-instagram
+//   @include background-image("instagram.png", center, transparent, contain)
+// .fa-facebook
+//   @include background-image("facebook.png", center, transparent, contain)
 
 .footer
     min-height: 100px
@@ -35,6 +35,12 @@
     .footer_right
         margin-top: 20px
         grid-row-gap: 10px
+        .fa-facebook
+          @include background-image("facebook.png", center, transparent, contain)
+        .fa-telegram
+          @include background-image("telegram.png", center, transparent, contain)
+        .fa-instagram
+          @include background-image("instagram.png", center, transparent, contain)
         .footer_links
             display: grid
             width: 35px

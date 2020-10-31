@@ -79,11 +79,10 @@ export const Contacts = ({ t }) => {
                 <div className='address'>
                 <h3>{t('contacts_address')}</h3>
                 <div className='addressData'>
-                    <p>{t("contacts_address")}</p>
                     <p>{t(prospect)}</p>
                     <p>{t(metro)}</p>
-                    <p><span className='bold'>{t(hoursWord)}</span>{phone}</p>
-                    <p><span className='bold'>{t(phoneWord)}</span>{hours}</p>
+                    <p><span className='bold'>{t(hoursWord)} : </span>{hours}</p>
+                    <p><span className='bold'>{t(phoneWord)} : </span>{phone}</p>
                     <p><span className='bold'>{t(mailWord)}</span>{email}</p>
                 </div>
             </div>

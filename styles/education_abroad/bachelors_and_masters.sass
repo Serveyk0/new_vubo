@@ -5,6 +5,10 @@
 .wrapperIpz 
     margin-bottom: 50px
     padding: 50px 0 20px 0 
+    @media screen and ( max-width: 768px )
+        padding: 10px 0 10px 0 !important
+        margin-bottom: 0px !important
+        
 
 .shadowWrapp 
     width: 100%
@@ -47,6 +51,9 @@
     width: auto
     text-align: -webkit-right
     grid-template-columns: 1fr 1fr
+    @media screen and ( max-width: 768px )
+        margin-bottom: 5px !important
+        
     h2 
         @include fluidFontSize(15px, 25px, 320px, 1920px, 30px)
         color: #000000

@@ -1,7 +1,7 @@
 import { withTranslation } from '../../../i18n';
 import { Contacts } from './contacts'
 
-Contacts.getInitialProps = async () => ({
+Contacts.getStaticProps = async () => ({
   namespacesRequired: ['contacts'],
 })
 

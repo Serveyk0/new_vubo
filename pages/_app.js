@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import Router from 'next/router';
 import App from 'next/app'
 import { appWithTranslation } from '../i18n'
 import Header from '../components/header'
@@ -34,7 +36,10 @@ import '../styles/mva/project_management.sass'
 
 import '../styles/contacts.sass'
 
-const MyApp = ({ Component, pageProps }) => <><Header /><Menu /><Change_language /><div className="wrapper_components"><Component {...pageProps} /></div><Footer /></>
+const MyApp = ({ Component, pageProps }) => 
+{
+    return (<><Header /><Menu /><Change_language /><div className="wrapper_components"><Component {...pageProps} /></div><Footer /></>)
+}
 
 MyApp.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })
 

@@ -19,7 +19,7 @@ export const Menu = ({ t }) => {
         set_active_first_menu(index_1);
         set_active_second_menu(index_2);
         set_active_third_menu(index_3);
-        set_show_menu(0);
+        set_show_menu(!show_menu);
         document.body.style.overflow = ( document.body.style.overflow === "hidden" ? "auto" : "hidden")
     }
 
