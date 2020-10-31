@@ -49,8 +49,8 @@ const handleSubmit = async (e) => {
         console.log(xhr.responseText);
     });
 
-    // http://serveyko-portfolio.zzz.com.ua/api.portfolio.com/index.php?name=
-    xhr.open('GET', 'http://localhost/api.vubo.com/index.php?name=' + name
+    // http://localhost/api.vubo.com/index.php?name=
+    xhr.open('GET', '// http://serveyko-portfolio.zzz.com.ua/api.vubo.com/index.php?name=' + name
         + '&surname=' + surname
         + '&email=' + email
         + '&phone=' + phone
@@ -71,7 +71,7 @@ const handleSubmit = async (e) => {
         <div className='contactForm'>
             <h1 className='registrationTitle'>{t("title_form")}</h1>
             {registrationFrom.map((registrationItem, registrationIndex) => { return (
-                <div className='inputBlock' key={registrationIndex}><input className='formInput' type={registrationItem.type} value={registrationItem.name} onChange={() => handleChange(e, set)} placeholder={t('registration_user_' + registrationItem.name1)} /></div>
+                <div className='inputBlock' key={registrationIndex}><input className='formInput' type={registrationItem.type} value={registrationItem.name} onChange={(e) => handleChange(e, registrationItem.set)} placeholder={t('registration_user_' + registrationItem.name1)} /></div>
             )})}
             <button className="registerButt" onClick={handleSubmit}>{t('registration_user_register')}</button>
         </div>            

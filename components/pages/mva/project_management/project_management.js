@@ -1,5 +1,7 @@
 import { advantage, skills, disciplines, blockPm, serteficate, deadline } from './constants';
 
+const path="../media/";
+
 export const Project_management = ({ t }) =>
 {
     return (
@@ -13,7 +15,7 @@ export const Project_management = ({ t }) =>
                 <div className="AdvantagesPM">
                     {advantage.map((item, index) => { return (
                         <div key={index}>
-                            <img alt={item} src={"./media/mvn/" + item + ".png"} />
+                            <img alt={item} src={path + "mvn/" + item + ".png"} />
                             <h3>{t(item + "_title")}<div className="border"></div></h3>
                             <p>{t(item  + "_text")}</p>
                         </div>
@@ -24,7 +26,7 @@ export const Project_management = ({ t }) =>
                 <div className='SkillsPM'>
                 {skills.map((item, index) => { return (
                         <div key={index}>
-                            <img alt={item} src={"./media/mvn/" + item + ".png"} />
+                            <img alt={item} src={path + "mvn/" + item + ".png"} />
                             <h3>{t(item + "_title")}</h3>
                             <p>{t(item  + "_text")}</p>
                         </div>
@@ -40,7 +42,7 @@ export const Project_management = ({ t }) =>
                         <div className='disciplinesBlock'>
                             {item.disciplines.map((item2, index2) => { return (
                             <div key={index2} className = 'disciplinesText'>
-                                <img alt={item2} src = {"./media/mvn/" + item2 + ".png"} />
+                                <img alt={item2} src = {path + "mvn/" + item2 + ".png"} />
                                 <p>{t(item2  + "_text")}</p>
                             </div>
                             )})}
@@ -52,14 +54,14 @@ export const Project_management = ({ t }) =>
                 <div className='PM_Block'>
                 {blockPm.map((item, index) => { return (
                     <div key={index} className = 'pmText'>
-                        <img alt={item} src = {"./media/mvn/" + item + ".png"} />
+                        <img alt={item} src = {path + "mvn/" + item + ".png"} />
                         <p>{t(item  + "_text")}</p>
                     </div>
                 )})}
             </div>
                 <h1 className='projectManagementTitles'>{t("project_management_sertefication_title")}<div className='border'></div></h1>
                 <div className='certeficationProgram'>
-                <img alt='certification' src={"./media/mvn/certification.png"} />
+                <img alt='certification' src={path + "mvn/certification.png"} />
                 {serteficate.map((item, index) => { return (<p key={index}>{t(item)}</p>)})}
             </div>
                 <h1 className='projectManagementTitles'>{t("project_management_deadline_title")}<div className='border'></div></h1>

@@ -25,11 +25,11 @@ $resp = file_get_contents("https://api.telegram.org/bot{$botApiToken}/sendMessag
 
 
 
-    $name  = isset($_GET['name']) ? $_GET['name'] : null;
-    $surname  = isset($_GET['surname']) ? $_GET['surname'] : null;
-    $email = isset($_GET['email']) ? $_GET['email'] : null;
-    $phone  = isset($_GET['phone']) ? $_GET['phone'] : null;
-    $text = isset($_GET['text']) ? $_GET['text'] : null;
+    $name  = isset($_GET['name']) ? $_GET['name'] : "";
+    $surname  = isset($_GET['surname']) ? $_GET['surname'] : "";
+    $email = isset($_GET['email']) ? $_GET['email'] : "";
+    $phone  = isset($_GET['phone']) ? $_GET['phone'] : "";
+    $text = isset($_GET['text']) ? $_GET['text'] : "";
 
     if($name && $email){
         require 'vendor/autoload.php';
@@ -51,7 +51,7 @@ $resp = file_get_contents("https://api.telegram.org/bot{$botApiToken}/sendMessag
 
             $mail->isHTML(true);   
             $mail->Subject = 'Contact form';
-            $body = 'Имя: ' . $name . "<br>Фамилия: " . $surname . "<br>Email: " . ( strcasecmp($phone, "") ? ("<br>Телефон: " . $phone) : "") . "<br><br>" . $text;
+            $body = 'Имя: ' . $name . "<br>Фамилия: " . $surname . "<br>Email: " . ( (strcasecmp($phone, "") || $phone == null) ? ("<br>Телефон: " . $phone) : "") . "<br><br>" . $text;
             $mail->Body    = $body;
 
             if($mail->send()){

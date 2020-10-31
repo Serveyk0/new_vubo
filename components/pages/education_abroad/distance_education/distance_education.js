@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { href, distance_advantage } from './constants';
 
+const path="../media/";
+
 export const Distance_education = ({ t }) =>
 {
     return (
@@ -10,7 +12,7 @@ export const Distance_education = ({ t }) =>
                     {
                     href.map((item, index) => { return (
 						<div key={index} className="hrefItem">
-							<img alt={item} src={"./media/it_" + item + ".png"} />
+							<img alt={item} src={path + "it_" + item + ".png"} />
 							<p>{t(item)}</p>
 							<Link className="link" href={item}><button>{t("more_details")}</button></Link>
 						</div>

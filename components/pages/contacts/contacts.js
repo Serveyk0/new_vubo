@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { contacts } from './constants';
 import ModalWindow from './modal_window';
 
+const path="../media/";
 
-export const phone = '093-963-11-81';
+export const phone_1 = '093-963-11-81';
 export const hours = '09:00-18:00';
-export const email = 'openbusinessedu@gmail_com';
+export const email_1 = 'openbusinessedu@gmail_com';
 
 export const city = 'contacts_address';
 export const prospect = 'contacts_prospect';
@@ -45,7 +46,7 @@ export const Contacts = ({ t }) => {
         });
 
         // http://serveyko-portfolio.zzz.com.ua/api.portfolio.com/index.php?name=
-        xhr.open('GET', 'http://serveyko.zzz.com.ua/api.vubo.com/index.php?name=' + name
+        xhr.open('GET', 'http://serveyko-portfolio.zzz.com.ua/api.vubo.com/index.php?name=' + name
             + '&surname=' + surname
             + '&email=' + email
             + '&phone=' + phone
@@ -65,7 +66,7 @@ export const Contacts = ({ t }) => {
         <div className='contactsName'>
 				{contacts.map((item, index) => { return ( 
 					<div key={index} className='contact'>
-						<img className='adminImage' alt={item} src={"./media/" + item + ".jpg"} />
+						<img className='adminImage' alt={item} src={path + item + ".jpg"} />
 						<p className='name'>{t(item + "_name")}</p>
 						<p className='profession'>{t(item + "_profession")}</p>
 						<p className='contacts'>{t(item + "_phone")}</p>
@@ -82,19 +83,19 @@ export const Contacts = ({ t }) => {
                     <p>{t(prospect)}</p>
                     <p>{t(metro)}</p>
                     <p><span className='bold'>{t(hoursWord)} : </span>{hours}</p>
-                    <p><span className='bold'>{t(phoneWord)} : </span>{phone}</p>
-                    <p><span className='bold'>{t(mailWord)}</span>{email}</p>
+                    <p><span className='bold'>{t(phoneWord)} : </span>{phone_1}</p>
+                    <p><span className='bold'>{t(mailWord)}</span></p>
                 </div>
             </div>
             <div>
                 { regStatus ?  <RegisterStatus t={t} closeRegisterStatus={closeRegisterStatus()} /> : null }
                 <h1 className='contactsFormTitle'>{t('contacts_reverse_form')}</h1>
                 <div id='telegramForm' className='feedback'>
-                    <p className='formText'>{t(nameWord)}</p><input className='contactsInput' name='name' value={name} placeholder={name} onChange={() => handleChange(e, set_name)} />
-                    <p className='formText'>{t(surnameWord)}</p><input className='contactsInput' name='surname' value={surname} placeholder={surname} onChange={() => handleChange(e, set_surname)} />
-                    <p className='formText'>{emailFormWord}</p><input className='contactsInput' name='email' value={email} placeholder={email} onChange={() => handleChange(e, set_email)} />
-                    <p className='formText'>{t(phoneFormWord)}</p><input className='contactsInput' name='phone' value={phone} placeholder={phone} onChange={() => handleChange(e, set_phone)} />
-                    <p className='formText'>{t(textWord)}</p><textarea className='contactsInput textareaInput' value={text} name='mailText' placeholder={text} onChange={() => handleChange(e, set_text)} ></textarea>
+                    <p className='formText'>{t(nameWord)}</p><input className='contactsInput' name='name' value={name} placeholder={name} onChange={(e) => handleChange(e, set_name)} />
+                    <p className='formText'>{t(surnameWord)}</p><input className='contactsInput' name='surname' value={surname} placeholder={surname} onChange={(e) => handleChange(e, set_surname)} />
+                    <p className='formText'>{emailFormWord}</p><input className='contactsInput' name='email' value={email} placeholder={email} onChange={(e) => handleChange(e, set_email)} />
+                    <p className='formText'>{t(phoneFormWord)}</p><input className='contactsInput' name='phone' value={phone} placeholder={phone} onChange={(e) => handleChange(e, set_phone)} />
+                    <p className='formText'>{t(textWord)}</p><textarea className='contactsInput textareaInput' value={text} name='mailText' placeholder={text} onChange={(e) => handleChange(e, set_text)} ></textarea>
                     <button className='btn' onClick={handleSubmit}>{t(send)}</button>
                 </div>
             </div>

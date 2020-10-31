@@ -1,5 +1,6 @@
 import { it } from './constants';
 
+const path="../media/";
 export const Bachelors_and_masters = (props) =>
 {
     const { t, title } = props;
@@ -15,7 +16,7 @@ export const Bachelors_and_masters = (props) =>
                         {item.advantage.map((item2, index2) => { 
                             return ( 
                             <div key={index2} className = 'ITAdvantageText'>
-                                <img alt={item2} src = { "./media/" + item2 + ".png"} />
+                                <img alt={item2} src = { path + item2 + ".png"} />
                                 <p>{t(item2 == "bachelor_small" ? title : item2)}</p>
                             </div>
                         )})}

@@ -1,3 +1,4 @@
+const path="../media/";
 export const Header = ({ t }) =>
 {
     return (
@@ -6,7 +7,7 @@ export const Header = ({ t }) =>
                 <span className="header_top">   {t("open")}      </span><br/>
                 <span className="header_bottom">{t("univercity")}</span>
             </h1>
-            <img className="header_logo margin_auto" src="./media/black_logo.png" alt={t("open") + " " + t("univercity") + " " + t("business") + " " + t("education")} />
+            <img className="header_logo margin_auto" src={path + "black_logo.png"} alt={t("open") + " " + t("univercity") + " " + t("business") + " " + t("education")} />
             <h1 className="header_right">
                 <span className="header_top">   {t("business")} </span><br/>
                 <span className="header_bottom">{t("education")}</span>

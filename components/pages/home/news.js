@@ -3,6 +3,8 @@ import Link from 'next/link'
 import "react-multi-carousel/lib/styles.css";
 import { items } from './constants';
 
+const path="../media/";
+
 export const News = ({ t }) => {
     const responsive = {
         superLargeDesktop: {
@@ -51,15 +53,15 @@ export const News = ({ t }) => {
                 items.map((item, index) =>
                     <div className="slider" key={index}>
                         <div className="news_1">
-                            <img alt={item[0].img} src={"./media/" + item[0].href + ".jpg"} />
+                            <img alt={item[0].img} src={path + item[0].href + ".jpg"} />
                             <Link href={item[0].href}><button className="slider_href_button">{t("more")}</button></Link>
                         </div>
                         <div className="news_2">
-                            <img alt={item[1].img} src={"./media/" + item[1].href + ".jpg"} />
+                            <img alt={item[1].img} src={path + item[1].href + ".jpg"} />
                             <Link href={item[1].href}><button className="slider_href_button">{t("more")}</button></Link>
                         </div>
                         <div className="news_3">
-                            <img alt={item[2].img} src={"./media/" + item[2].href + ".jpg"} />
+                            <img alt={item[2].img} src={path + item[2].href + ".jpg"} />
                             <Link href={item[2].href}><button className="slider_href_button">{t("more")}</button></Link>
                         </div>
                     </div>

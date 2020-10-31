@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Registration } from "../../registration"
 
+const path="../media/";
+
 const li = ["memory", "concentration", "languages", "assimilation", "sociability", "space", "foreign"]
 const second_li = ["glove", "left_hand2", "instruction", "notebook", "tracker", "designer"]
 
@@ -15,7 +17,7 @@ export const The_secret_of_genius = ({ t }) =>
             
             <div className="the_secret_of_genius_block grid">
                 <div>
-            <img className="the_secret_of_genius_images" src="./media/наташка сайт.jpg" alt={t("title")} />
+            <img className="the_secret_of_genius_images" src={ path + "наташка сайт.jpg"} alt={t("title")} />
                 <p>
                     <span className="bold italic">{"«" + t("title") + "»"}</span>
                     {t("unique")}

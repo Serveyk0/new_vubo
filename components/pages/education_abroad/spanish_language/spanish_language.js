@@ -1,5 +1,7 @@
 import { spanishTable, educationTourism } from './constants';
 
+const path="../media/";
+
 export const Spanish_language = ({ t }) =>
 {
     return (
@@ -12,7 +14,7 @@ export const Spanish_language = ({ t }) =>
                     <h2 className='advantageTitle'>{t('seven_advantage')}</h2>
                     {educationTourism.map((item, index) => { return (
                         <div key={index} className='advantageText'>
-                            <img alt={item} src={"./media/" + item + ".png"} />
+                            <img alt={item} src={path + item + ".png"} />
                             <p>{t(item)}</p>
                         </div>
                     )})}

@@ -1,5 +1,7 @@
 import { priceOther, priceUSA } from './constants';
 
+const path="../media/";
+
 export const General_conditions = (props) =>
 {
     const { t, name } = props;
@@ -14,7 +16,7 @@ export const General_conditions = (props) =>
                             <div className={'priceList'}>
                                 {Object.values(item.conditions).map((item2, index2) => { return(
                                     <div key={index2}>
-                                        <span className='priceItem'><img className='priceImages' alt={item2.name} src={"./media/" + item2.name + ".png"} />
+                                        <span className='priceItem'><img className='priceImages' alt={item2.name} src={path + item2.name + ".png"} />
                                         <p>{t(item2.text)}</p></span>
                                     </div>
                                 )})}

@@ -1,5 +1,7 @@
 import { countDays } from "./constants";
 
+const path="../media/";
+
 export const Get_days = (props) =>
 {
     const { t, name, title } = props;
@@ -41,7 +43,7 @@ export const Get_days = (props) =>
                                 <label htmlFor={'day' + index} className='close'></label> 
                                 <div className='daysBlockImage'>
                                 {Object.values(item.images).map((image, indexImage) => {
-                                    return(<img key={indexImage} className='daysImage' alt={image.name} src={"./media/" + name + "/" + image.img + ".jpg"} />)
+                                    return(<img key={indexImage} className='daysImage' alt={image.name} src={path + name + "/" + image.img + ".jpg"} />)
                                 })}
                                 </div>
                             </div>

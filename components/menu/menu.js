@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link'
 import { main } from './constants';
+const path="../media/";
 
 export const Menu = ({ t }) => {
     const [show_menu, set_show_menu] = useState(0);
@@ -81,7 +82,7 @@ export const Menu = ({ t }) => {
                                     
                                         <div className="menu_list_item_href_wrapper first_sub grid ">
                                         <Link className="menu_list_item_href" href={item.name === "main" ? "/" : item.name} onClick={() => set_show_menu(0)}><span className={(index === active_first_menu ? "active_menu" : "")} onClick={() => click_menu(index, -1, -1)}>{t(item.name)}</span></Link>
-                                        {item.hasOwnProperty("sublist") ? <img className="down_arrow" alt={t(item.name)} src="./media/down.png" onClick={() => { set_click_submenu(click_submenu === index ? -1 : index) }} /> : ""}
+                                        {item.hasOwnProperty("sublist") ? <img className="down_arrow" alt={t(item.name)} src={path + "down.png"} onClick={() => { set_click_submenu(click_submenu === index ? -1 : index) }} /> : ""}
                                         </div>
                                     {
                                         item.hasOwnProperty("sublist") ?
@@ -93,7 +94,7 @@ export const Menu = ({ t }) => {
                                                                 
                                                                 <div className="menu_list_item_href_wrapper second_sub_how grid ">
                                                                 <Link className="menu_list_item_href" href={item2.name} onClick={() => set_show_menu(0)}><span className={(index === active_first_menu && index2 === active_second_menu ? "active_menu" : "")} onClick={() => click_menu(index, index2, -1)}>{t(item2.name)}</span></Link>
-                                                                    {item2.hasOwnProperty("sublist") ? <img className="down_arrow" alt={t(item.name)} src="./media/down.png" onClick={() => { set_click_second_submenu(click_second_submenu === index2 ? -1 : index2) }} /> : ""}
+                                                                    {item2.hasOwnProperty("sublist") ? <img className="down_arrow" alt={t(item.name)} src={ path + "down.png" } onClick={() => { set_click_second_submenu(click_second_submenu === index2 ? -1 : index2) }} /> : ""}
                                                                     </div>
                                                                 {
                                                                     item2.hasOwnProperty("sublist") ?
