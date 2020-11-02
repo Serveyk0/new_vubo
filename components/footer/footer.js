@@ -1,8 +1,8 @@
 const facebook = "facebook";
 const telegram = "telegram";
 const instagram = "instagram";
-const mail = "openbusinessedu@gmail.com";
-const phone = "093-963-11-81";
+const mail = "kariazantseva@gmail.com";
+const phone = "068-000-11-42";
 
 const hrefs =
     [

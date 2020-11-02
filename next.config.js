@@ -6,5 +6,5 @@ module.exports = {
   publicRuntimeConfig: {
     localeSubpaths,
   },
-  exportTrailingSlash: true,
+  trailingSlash: true,
 }

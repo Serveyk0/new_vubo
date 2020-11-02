@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { advantage, skills, disciplines, blockPm, serteficate, deadline } from './constants';
 
 const path="../media/";
@@ -6,7 +7,15 @@ export const Project_management = ({ t }) =>
 {
     return (
         <div className="project_management">
-                            <h1 className='projectManagementTitles'>{t("project_management_title")}</h1>
+            <Head>
+                <title>{t("project_management_title")}</title>
+                <meta name="description" content={t("project_management_title") + " " + t("project_management_main_text") + " " +
+            advantage.map((item) => t(item + "_title") + " " + t(item  + "_text") + " ") + t("project_management_skills_title") + " " +
+            skills.map((item) => t(item + "_title") + " " + t(item  + "_text")
+            )
+            } />
+            </Head>
+                <h1 className='projectManagementTitles'>{t("project_management_title")}</h1>
                 <div className='projectManagementMainText'>
                     <p className='projectManagementMainTextIpz'>{t("project_management_main_text")}</p>
                 </div>

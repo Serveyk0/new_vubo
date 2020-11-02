@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { contacts } from './constants';
 import ModalWindow from './modal_window';
+import Head from 'next/head'
 
 const path="../media/";
 
 export const phone_1 = '093-963-11-81';
 export const hours = '09:00-18:00';
-export const email_1 = 'openbusinessedu@gmail_com';
+// export const email_1 = 'openbusinessedu@gmail_com';
 
 export const city = 'contacts_address';
+export const street = 'street';
 export const prospect = 'contacts_prospect';
 export const metro = 'contacts_metro';
 export const hoursWord = 'contacts_hours';
@@ -62,6 +64,20 @@ export const Contacts = ({ t }) => {
     }
     return (
         <div className="contacts"> 
+        <Head>
+        <title>Контакти</title>
+        <meta name="description" content={"Контакти" + " " +
+        t(city) + " " +
+        t(street) + " " +
+        t(prospect) + " " +
+        t(metro) + " " +
+        t(hoursWord) + " " +
+        t(phoneWord) + " " +
+        t(mailWord) + " " +
+        contacts.map((item) => t(item[0] + "_name") + " " + t(item[0] + "_profession") + " " + t(item[0] + "_email") )}
+         />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
         {show_modal ? <ModalWindow t={t} set_show_modal={set_show_modal} /> : ""}
         <div className='contactsName'>
 				{contacts.map((item, index) => { return ( 
@@ -69,7 +85,7 @@ export const Contacts = ({ t }) => {
 						<img className='adminImage' alt={item} src={path + item + ".jpg"} />
 						<p className='name'>{t(item + "_name")}</p>
 						<p className='profession'>{t(item + "_profession")}</p>
-						<p className='contacts'>{t(item + "_phone")}</p>
+						<p className='contacts'>{t(item + "_email")}</p>
 					</div>
 				)})}
 			</div>
@@ -82,9 +98,10 @@ export const Contacts = ({ t }) => {
                 <div className='addressData'>
                     <p>{t(prospect)}</p>
                     <p>{t(metro)}</p>
+                    <p>{t(street)}</p>
                     <p><span className='bold'>{t(hoursWord)} : </span>{hours}</p>
                     <p><span className='bold'>{t(phoneWord)} : </span>{phone_1}</p>
-                    <p><span className='bold'>{t(mailWord)}</span></p>
+                    {/* <p><span className='bold'>{t(mailWord)}</span></p> */}
                 </div>
             </div>
             <div>
@@ -96,7 +113,7 @@ export const Contacts = ({ t }) => {
                     <p className='formText'>{emailFormWord}</p><input className='contactsInput' name='email' value={email} placeholder={email} onChange={(e) => handleChange(e, set_email)} />
                     <p className='formText'>{t(phoneFormWord)}</p><input className='contactsInput' name='phone' value={phone} placeholder={phone} onChange={(e) => handleChange(e, set_phone)} />
                     <p className='formText'>{t(textWord)}</p><textarea className='contactsInput textareaInput' value={text} name='mailText' placeholder={text} onChange={(e) => handleChange(e, set_text)} ></textarea>
-                    <button className='btn' onClick={handleSubmit}>{t(send)}</button>
+                    <button className={"btn " + ((name !== "" && email !== "") ? "" : "disabled_btn" )} onClick={handleSubmit} disabled={ (name !== "" && email !== "") ? false : true}>{t(send)}</button>
                 </div>
             </div>
 				</div>  

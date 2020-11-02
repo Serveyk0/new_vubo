@@ -1,1 +1,1 @@
-export const contacts = ["oksana",];
+export const contacts = ["katya","yulya"];

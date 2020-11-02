@@ -12,6 +12,7 @@
     "contact_form_name": "NAME",
     "contact_form_surname": "SURNAME",
     "contact_form_phone": "PHONE",
+    "street": "Vasylkivska Street 1",
     "contact_form_text": "TEXT",
     "contact_form_send": "Send",
     "modal_title": "Submit Form",

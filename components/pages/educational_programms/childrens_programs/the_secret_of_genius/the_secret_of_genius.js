@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from 'react';
 import { Registration } from "../../registration"
 
@@ -11,6 +12,13 @@ export const The_secret_of_genius = ({ t }) =>
     const [show_modal, set_show_modal] = useState(false);
     return (
         <div className="the_secret_of_genius">
+            <Head>
+                <title>Секрет генія</title>
+                <meta name="description" content={"Дитячі програми" + " " + t("title") + " "
+            + t("author_methodology") + " " + t("left_hand") + " " + t("program") + "«" + t("title") + "» " +
+            t("neuropsychology") + " " + t("attention") + " " + t("developing") + " " + li.map((item) => {return (t(item) + " ")}) + 
+            t("frame") + " " + t("mnemonic") + t("quests") + second_li.map((item) => t(item))} />
+            </Head>
             {show_modal ? <Registration t={t} set_show_modal={set_show_modal} /> : ""}
             <h2 className="the_secret_of_genius_title blue text_center">{t("title")}</h2>
             <p className="about_methodology blue text_center">{t("about")}</p>

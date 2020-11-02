@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { spanishTable, educationTourism } from './constants';
 
 const path="../media/";
@@ -6,6 +7,12 @@ export const Spanish_language = ({ t }) =>
 {
     return (
         <div className="spanish_language">
+                        <Head>
+                <title>{t("title")}</title>
+                <meta name="description" content={t("title") + " " + 
+                educationTourism.map(item => t(item) + " ")}
+                />
+            </Head>
             <h1 className='spanishLanguageTitle'>{t("title")}</h1>
             <div className='content'>
                 <h2 className='educationTourismTitle'>{t('education_tourism')}</h2>

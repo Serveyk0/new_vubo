@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link'
 
 const path="../media/";
@@ -6,6 +7,14 @@ const hrefs = ['parent_school', 'childrens_programs'];
 export const Educational_programms = ({ t }) => {
     return (
         <div className="educational_programms">
+            <Head>
+                <title>Освітні програми</title>
+                <meta name="description" content={
+                    hrefs.map(item =>
+                            t(item) + " "
+                    )}
+                />
+            </Head>
             <div className='countryPagesHref'>
                 {hrefs.map((item, index) => {
                     return (

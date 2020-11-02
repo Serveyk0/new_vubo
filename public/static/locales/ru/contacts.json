@@ -12,6 +12,7 @@
     "contact_form_name": "ИМЯ",
     "contact_form_surname": "ФАМИЛИЯ",
     "contact_form_phone": "ТЕЛЕФОН",
+    "street": "Улица Васильковская 1",
     "contact_form_text": "ТЕКСТ",
     "contact_form_send": "Отправить",
     "modal_title": "Отправка формы",

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link'
 
 const hrefs = [ 'ua_usa','ua_india','ua_ghana'];
@@ -9,6 +10,10 @@ export const International_projects = ({ t }) =>
 {
     return (
         <div className="international_projects">
+            <Head>
+                <title>Міжнародні проекти</title>
+                <meta name="description" content={"Міжнародні проекти" + " " + hrefs.map((item) => t(item) + " " + i_p.map((item) => t(item) + " "))} />
+            </Head>
             <div className='countryPagesHref'>
                     {hrefs.map((item, index) => { return (
                         <Link key={index} href={item}>

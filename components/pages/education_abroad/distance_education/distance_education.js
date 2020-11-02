@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import { href, distance_advantage } from './constants';
 
@@ -7,6 +8,12 @@ export const Distance_education = ({ t }) =>
 {
     return (
         <div className="distance_education">
+            <Head>
+                <title>{t("title")}</title>
+                <meta name="description" content={t("title") + " " + 
+                href.map(item => t(item) + " ") + distance_advantage.map((item, index) => t(item))}
+                />
+            </Head>
             <h1 className='distanceLearningTitle'>{t("title")}</h1>
             <div className="Master__And__Bachelor">
                     {

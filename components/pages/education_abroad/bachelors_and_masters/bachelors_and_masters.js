@@ -1,3 +1,4 @@
+import Head   from 'next/head';
 import { it } from './constants';
 
 const path="../media/";
@@ -6,7 +7,19 @@ export const Bachelors_and_masters = (props) =>
     const { t, title } = props;
     return (
         <div className="bachelors_and_masters">
-                        <div className='wrapperIpz content'>
+            <Head>
+                <title>{t(title)}</title>
+                <meta name="description" content={
+                    t(title) + " " + 
+                    it.map((item) => { return (
+                    t(item.title) + " " + 
+                        item.advantage.map((item2) => { 
+                            t(item2 == "bachelor_small" ? title : item2) + " "
+                        })
+                    )})}
+                />
+            </Head>
+            <div className='wrapperIpz content'>
             {it.map((item, index) => { return (
                     <div key={++index} className='ITAdvantage'>
                     <div className='shadowWrapp'>

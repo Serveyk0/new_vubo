@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 
 const path="../media/";
@@ -7,6 +8,10 @@ export const Mva = ({ t }) =>
 {
     return (
         <div className="mva">
+            <Head>
+                <title>МВА</title>
+                <meta name="description" content={"МВА" + " " + mva_href.map((item) => t(item))} />
+            </Head>
                             {mva_href.map((item, index) => { return (
                                 <Link key={index} href={item}>
                         <div className='mvaPagesHrefItem'>

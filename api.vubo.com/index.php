@@ -42,7 +42,7 @@ $resp = file_get_contents("https://api.telegram.org/bot{$botApiToken}/sendMessag
             $mail->Host       = 'smtp.gmail.com';                
             $mail->SMTPAuth   = true;                             
             $mail->Username   = 'serveyko.sites.test@gmail.com';           
-            $mail->Password   = 'STalker19';                       
+            $mail->Password   = '_CJkjdtq71';                       
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
             $mail->Port       = 587;
 
