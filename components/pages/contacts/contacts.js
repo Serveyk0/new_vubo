@@ -48,7 +48,8 @@ export const Contacts = ({ t }) => {
         });
 
         // http://serveyko-portfolio.zzz.com.ua/api.portfolio.com/index.php?name=
-        xhr.open('GET', 'http://serveyko-portfolio.zzz.com.ua/api.vubo.com/index.php?name=' + name
+        //http://vubo.org.ua
+        xhr.open('GET', 'http://vubo.org.ua/api.vubo.com/index.php?name=' + name
             + '&surname=' + surname
             + '&email=' + email
             + '&phone=' + phone
@@ -82,7 +83,7 @@ export const Contacts = ({ t }) => {
         <div className='contactsName'>
 				{contacts.map((item, index) => { return ( 
 					<div key={index} className='contact'>
-						<img className='adminImage' alt={item} src={path + item + ".jpg"} />
+						<img className='adminImage' alt={item} src={path + item + ".png"} />
 						<p className='name'>{t(item + "_name")}</p>
 						<p className='profession'>{t(item + "_profession")}</p>
 						<p className='contacts'>{t(item + "_email")}</p>
@@ -108,9 +109,9 @@ export const Contacts = ({ t }) => {
                 { regStatus ?  <RegisterStatus t={t} closeRegisterStatus={closeRegisterStatus()} /> : null }
                 <h1 className='contactsFormTitle'>{t('contacts_reverse_form')}</h1>
                 <div id='telegramForm' className='feedback'>
-                    <p className='formText'>{t(nameWord)}</p><input className='contactsInput' name='name' value={name} placeholder={name} onChange={(e) => handleChange(e, set_name)} />
+                    <p className='formText'>{t(nameWord)+"*"}</p><input className='contactsInput' name='name' value={name} placeholder={name} onChange={(e) => handleChange(e, set_name)} />
                     <p className='formText'>{t(surnameWord)}</p><input className='contactsInput' name='surname' value={surname} placeholder={surname} onChange={(e) => handleChange(e, set_surname)} />
-                    <p className='formText'>{emailFormWord}</p><input className='contactsInput' name='email' value={email} placeholder={email} onChange={(e) => handleChange(e, set_email)} />
+                    <p className='formText'>{emailFormWord+"*"}</p><input className='contactsInput' name='email' value={email} placeholder={email} onChange={(e) => handleChange(e, set_email)} />
                     <p className='formText'>{t(phoneFormWord)}</p><input className='contactsInput' name='phone' value={phone} placeholder={phone} onChange={(e) => handleChange(e, set_phone)} />
                     <p className='formText'>{t(textWord)}</p><textarea className='contactsInput textareaInput' value={text} name='mailText' placeholder={text} onChange={(e) => handleChange(e, set_text)} ></textarea>
                     <button className={"btn " + ((name !== "" && email !== "") ? "" : "disabled_btn" )} onClick={handleSubmit} disabled={ (name !== "" && email !== "") ? false : true}>{t(send)}</button>

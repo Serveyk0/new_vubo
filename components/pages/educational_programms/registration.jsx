@@ -50,7 +50,9 @@ const handleSubmit = async (e) => {
     });
 
     // http://localhost/api.vubo.com/index.php?name=
-    xhr.open('GET', '// http://serveyko-portfolio.zzz.com.ua/api.vubo.com/index.php?name=' + name
+    //http://serveyko-portfolio.zzz.com.ua
+    //http://vubo.org.ua/
+    xhr.open('GET', 'http://vubo.org.ua/api.vubo.com/index.php?name=' + name
         + '&surname=' + surname
         + '&email=' + email
         + '&phone=' + phone
