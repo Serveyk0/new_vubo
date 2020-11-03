@@ -6,6 +6,7 @@ export const Main_text = ({ t }) =>
 			<div className="content mainText">
           <Head>
               <title>{t("title")}</title>
+              <link rel="shortcut icon" href="/favicon.ico" />
               <meta name="description" content={t("title") + " " + t("main_text_1") + " " +
 t("main_text_2") + " " +
 t("main_text_3")} />

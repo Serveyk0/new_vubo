@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Router from 'next/router';
 import App from 'next/app'
+import Head from 'next/head';
 import { appWithTranslation } from '../i18n'
 import Header from '../components/header'
 import Menu from '../components/menu'
@@ -38,7 +39,11 @@ import '../styles/contacts.sass'
 
 const MyApp = ({ Component, pageProps }) => 
 {
-    return (<><Header /><Menu /><Change_language /><div className="wrapper_components"><Component {...pageProps} /></div><Footer /></>)
+    return (<><Head>
+		<meta charSet="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	</Head><Header /><Menu /><Change_language /><div className="wrapper_components"><Component {...pageProps} /></div><Footer /></>)
 }
 
 MyApp.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })

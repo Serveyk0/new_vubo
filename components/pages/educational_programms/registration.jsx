@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import ModalWindow from './modal_window';
 export const Registration = (props) =>
 {
     const { t, set_show_modal } = props;
@@ -9,6 +9,7 @@ export const Registration = (props) =>
     const [phone, set_phone] = useState(''); 
     const [text, set_text] = useState(''); 
     const [regStatus, set_regStatus] = useState(false);
+    const [show_modal2, set_show_modal2] = useState(false);
 
     const registrationFrom = [
         {
@@ -51,15 +52,16 @@ const handleSubmit = async (e) => {
 
     // http://localhost/api.vubo.com/index.php?name=
     //http://serveyko-portfolio.zzz.com.ua
-    //http://vubo.org.ua/
-    xhr.open('GET', 'http://vubo.org.ua/api.vubo.com/index.php?name=' + name
+    //http://www.vubo.org.ua/api.vubo.com/
+    xhr.open('GET', 'http://www.vubo.org.ua/api.vubo.com/index.php?name=' + name
         + '&surname=' + surname
         + '&email=' + email
         + '&phone=' + phone
         + '&text=' + t("title"));
     xhr.send();
     e.preventDefault();
-    set_show_modal(1);
+    set_show_modal(0);
+    set_show_modal2(1);
     set_name("");
     set_surname("");
     set_email("");
@@ -69,6 +71,7 @@ const handleSubmit = async (e) => {
 
     return (
         <section className='registrationContent'>
+        {show_modal2 ? <ModalWindow t={t} set_show_modal2={set_show_modal2} /> : ""}
         <div className='closeBtn' onClick={() => set_show_modal(0)} />
         <div className='contactForm'>
             <h1 className='registrationTitle'>{t("title_form")}</h1>

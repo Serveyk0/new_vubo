@@ -25,7 +25,7 @@ export const The_secret_of_genius = ({ t }) =>
             
             <div className="the_secret_of_genius_block grid">
                 <div>
-            <img className="the_secret_of_genius_images" src={ path + "наташка сайт.jpg"} alt={t("title")} />
+            <img className="the_secret_of_genius_images" src={ path + "natali.jpg"} alt={t("title")} />
                 <p>
                     <span className="bold italic">{"«" + t("title") + "»"}</span>
                     {t("unique")}

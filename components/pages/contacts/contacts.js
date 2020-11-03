@@ -48,8 +48,8 @@ export const Contacts = ({ t }) => {
         });
 
         // http://serveyko-portfolio.zzz.com.ua/api.portfolio.com/index.php?name=
-        //http://vubo.org.ua
-        xhr.open('GET', 'http://vubo.org.ua/api.vubo.com/index.php?name=' + name
+        //http://www.vubo.org.ua/api.vubo.com/
+        xhr.open('GET', 'http://www.vubo.org.ua/api.vubo.com/index.php?name=' + name
             + '&surname=' + surname
             + '&email=' + email
             + '&phone=' + phone
