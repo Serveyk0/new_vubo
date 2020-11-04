@@ -13,7 +13,7 @@ export const The_secret_of_genius = ({ t }) =>
     return (
         <div className="the_secret_of_genius">
             <Head>
-                <title>Секрет генія</title>
+                <title>Таємниця генія</title>
                 <meta name="description" content={"Дитячі програми" + " " + t("title") + " "
             + t("author_methodology") + " " + t("left_hand") + " " + t("program") + "«" + t("title") + "» " +
             t("neuropsychology") + " " + t("attention") + " " + t("developing") + " " + li.map((item) => {return (t(item) + " ")}) + 

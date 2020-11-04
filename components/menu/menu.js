@@ -89,11 +89,13 @@ export const Menu = ({ t }) => {
                                             <div className={"grid_li first_sublist " + (click_submenu === index ? "submenu_block" : "")}>
                                                 <ul className="menu_sublist grid">
                                                     {item.sublist.map((item2, index2) =>
+                                                    {
+                                                    return (
                                                         <div className="grid_li" key={index2}>
                                                             <li className="menu_list_item second_sub">
                                                                 
                                                                 <div className="menu_list_item_href_wrapper second_sub_how grid ">
-                                                                <Link className="menu_list_item_href" href={item2.name} onClick={() => set_show_menu(0)}><span className={(index === active_first_menu && index2 === active_second_menu ? "active_menu" : "")} onClick={() => click_menu(index, index2, -1)}>{t(item2.name)}</span></Link>
+                                                                <Link className="menu_list_item_href" href={item2.name} onClick={() => set_show_menu(0)}><span className={(index === active_first_menu && index2 === active_second_menu ? "active_menu" : "") + (item2.name == "parent_school" ? " padding_0_import" : "") } onClick={() => click_menu(index, index2, -1)}>{t(item2.name)}</span></Link>
                                                                     {item2.hasOwnProperty("sublist") ? <img className="down_arrow" alt={t(item.name)} src={ path + "down.png" } onClick={() => { set_click_second_submenu(click_second_submenu === index2 ? -1 : index2) }} /> : ""}
                                                                     </div>
                                                                 {
@@ -112,6 +114,7 @@ export const Menu = ({ t }) => {
                                                                 }
                                                             </li>
                                                         </div>
+                                                    )}
                                                     )}
                                                 </ul>
                                             </div>

@@ -101,17 +101,35 @@
     -webkit-transform: translate(-50%,-50%)
     -ms-transform: translate(-50%,-50%)
     transform: translate(-50%,-50%)
+    width: 90%
     text-align: center
-    color: #4effef
+    color: #ffffff
     text-transform: uppercase
     @include fluidFontSize(15px, 32px, 360px, 1920px, 18px)
 
 .slider
     display: grid
     grid-gap: 20px
-    max-height: 500px
+    @media screen and ( max-width: 369px )
+        .news_1
+            position: relative
+            .news_text
+                -webkit-transform: translate(-50%, -50%) !important
+                transform: translate(-50%, -50%) !important
+            .news_main_text
+                display: none
     @media screen and ( max-width: 899px )
         margin: 20px auto 20px auto
+        @media screen and ( min-width: 370px )
+            .news_1
+                position: relative
+                .news_text
+                    -webkit-transform: translate(-50%, 10%) !important
+                    transform: translate(-50%, 10%) !important
+                    top: 10px !important
+                .news_main_text
+                    text-align: justify !important
+                    text-align-last: center !important
         .news_1,
         .news_2,
         .news_3
@@ -128,6 +146,7 @@
         grid-template-columns: repeat(3, 1fr)
         grid-template-rows: repeat(2, 1fr)
         padding: 30px
+        max-height: 500px
         .news_2,
         .news_3
             grid-column-start: 3
@@ -136,16 +155,37 @@
             grid-row-start: 1
         .news_3
             grid-row-start: 2
+            height: calc(100% - 20px)
         .news_1
             grid-row-start: 1
+            height: calc(100% - 20px)
             grid-row-end: 3
             grid-column-start: 1
             grid-column-end: 3
+    
+        .news_1
+            .news_text
+                top: 40px !important
     .news_1,
     .news_2,
     .news_3
         // box-shadow: 0px 0px 16px 0px #868686
         position: relative
+        .news_main_text
+            color: #ffffff
+            margin: auto
+            position: absolute
+            top: 50%
+            left: 50%
+            -webkit-transform: translate(-50%, -50%)
+            width: 80%
+            text-align: justify
+            text-align-last: center
+            transform: translate(-50%, -50%)
+            @include fluidFontSize(8px, 20px, 360px, 1920px, 15px)
+            text-align: center
+            color: #ffffff
+
         button
             margin: auto
             position: absolute
@@ -191,6 +231,7 @@
 .carousel-container
     margin-bottom: 30px
     border-top: 1px solid #c5c5c5
+
 
 
 @keyframes sheen

@@ -54,17 +54,18 @@ export const News = ({ t }) => {
                     <div className="slider" key={index}>
                         <div className="news_1">
                             <img alt={item[0].href} src={path + item[0].href + ".jpg"} />
-                            <h3 className="news_text">{t(item[0].href)}</h3>
+                            <h3 className="news_text text_color">{t(item[0].href)}</h3>
+                            <p className="news_main_text">{t(item[0].href + "_text")}</p>
                             <Link href={item[0].href}><button className="slider_href_button">{t("more")}</button></Link>
                         </div>
                         <div className="news_2">
                             <img alt={item[1].href} src={path + item[1].href + ".jpg"} />
-                            <h3 className="news_text">{t(item[1].href)}</h3>
+                            <h3 className="news_text text_color">{t(item[1].href)}</h3>
                             <Link href={item[1].href}><button className="slider_href_button">{t("more")}</button></Link>
                         </div>
                         <div className="news_3">
                             <img alt={item[2].href} src={path + item[2].href + ".jpg"} />
-                            <h3 className="news_text">{t(item[2].href)}</h3>
+                            <h3 className="news_text text_color">{t(item[2].href)}</h3>
                             <Link href={item[2].href}><button className="slider_href_button">{t("more")}</button></Link>
                         </div>
                     </div>

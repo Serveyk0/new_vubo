@@ -1,0 +1,41 @@
+@import "../mixins/mixin_font_size"
+    
+.parent_school
+    .parent_school_title
+        text-align: center
+    .people_block
+        display: grid
+        grid-template-columns: (auto-fit, minmax(150px, 200px))
+        align-items: center
+        justify-content: start
+        .people
+            text-align: center
+            display: grid
+            align-items: center
+            justify-content: center
+            grid-row-gap: 10px
+            img
+                max-height: 250px
+                margin: 0 auto
+            .people_name
+                padding: 0
+                font-weight: 500
+                margin: 0 auto
+                width: 80%
+            .people_text
+                margin: 0 auto
+                width: 80%
+    .parent_school_modules
+        padding: 0
+        margin: 0
+        .parent_school_modules_item
+            list-style: none
+            text-indent: 1.25cm
+            line-height: 1.5
+            @include fluidFontSize(13px, 18px, 360px, 1280px, 15px)
+            &:first-child
+                text-indent: 0 !important
+                font-weight: 700
+
+.register_button
+    margin: 0 auto
