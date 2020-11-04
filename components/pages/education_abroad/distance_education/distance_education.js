@@ -29,7 +29,7 @@ export const Distance_education = ({ t }) =>
                     <h2 className='distanceAdvantageTitle'>{t("distance_learning_advantage")}</h2>
                     {distance_advantage.map((item, index) => { return (
                         <div key={index} className='distanceAdvantageText'>
-                            <img alt={item} src={"./media/" + item + ".png"} />
+                            <img alt={item} src={path + item + ".png"} />
                             <p>{t(item)}</p>
                         </div>
                     )})}

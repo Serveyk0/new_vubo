@@ -7,7 +7,7 @@ const path="../media/";
 
 export const phone_1 = '093-963-11-81';
 export const hours = '09:00-18:00';
-// export const email_1 = 'openbusinessedu@gmail_com';
+export const email_1 = 'openbusinessedu@gmail.com';
 
 export const city = 'contacts_address';
 export const street = 'street';
@@ -91,7 +91,7 @@ export const Contacts = ({ t }) => {
 				)})}
 			</div>
             <div className='mapResponsive'>
-            <iframe className='iframeMap' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.4954406873985!2d30.501078615729412!3d50.394603679467764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8c93d1de9ff%3A0x9f02b35f3e6e56a4!2z0YPQuy4g0JzQuNGF0LDQuNC70LAg0KHRgtC10LvRjNC80LDRhdCwLCAxMNCQLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1565879914709!5m2!1sru!2sua' frameBorder='0' title='map' allowFullScreen></iframe>
+            <iframe className='iframeMap' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1271.7033562401334!2d30.50713842735401!3d50.396257467201764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8ca2d86db39%3A0x356ede56fb4ae11c!2z0YPQuy4g0JLQsNGB0LjQu9GM0LrQvtCy0YHQutCw0Y8sIDEsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1604490126962!5m2!1sru!2sua" frameBorder='0' title='map' allowFullScreen></iframe>
         </div>
 				<div className="addressFormBlock">
                 <div className='address'>
@@ -102,7 +102,7 @@ export const Contacts = ({ t }) => {
                     <p>{t(street)}</p>
                     <p><span className='bold'>{t(hoursWord)} : </span>{hours}</p>
                     <p><span className='bold'>{t(phoneWord)} : </span>{phone_1}</p>
-                    {/* <p><span className='bold'>{t(mailWord)}</span></p> */}
+                    <p><span className='bold'>{t(mailWord)}</span></p>
                 </div>
             </div>
             <div>

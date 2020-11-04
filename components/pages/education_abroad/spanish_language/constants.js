@@ -98,6 +98,7 @@ export const spanishTable =
             },
             {
                 'content' : ['group_number_of_hours_4', 'group_set', 'group_level_learning_c1'],
+                'nextHeader' : '', 
             },
         ]
     },

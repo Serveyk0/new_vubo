@@ -1,23 +1,23 @@
 const facebook = "facebook";
 const telegram = "telegram";
 const instagram = "instagram";
-const mail = "kariazantseva@gmail.com";
+const mail = "openbusinessedu@gmail.com";
 const phone = "068-000-11-42";
 
 const hrefs =
     [
         {
-            href: "https://www.instagram.com/19.19.2000/?hl=el",
+            href: "#",
             text: facebook,
             class: "fa-facebook"
         },
         {
-            href: "https://www.instagram.com/19.19.2000/?hl=el",
+            href: "#",
             text: telegram,
             class: "fa-telegram"
         },
         {
-            href: "https://www.instagram.com/19.19.2000/?hl=el",
+            href: "#",
             text: instagram,
             class: "fa-instagram"
         },
