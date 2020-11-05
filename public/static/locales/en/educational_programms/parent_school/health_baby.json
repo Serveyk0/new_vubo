@@ -1,19 +1,8 @@
 {
-    "title": "SCHOOL OF MOTHERHOOD «WARM EMBRACE»",
-    "school": "Our school will give you confidence in yourself and the future. In our classes you will learn a lot of new and interesting things not only about pregnancy and childbirth, but also how to properly care for a baby from birth to one year.",
-    "online": "The Healthy Baby course is an on-line communication course with specialists, not a pre-recorded video.",
-    "baby": "Healthy baby course specialists",
-    "irina": "Irina Mikhailoshina",
-    "psycho": "Obstetrician-Gynecologist, Psychoanalyst",
-    "course": "The course consists of ",
-    "course2": "on-line lectures",
-    "course3": "webinars of a neonatologist",
-    "course4": "practical trainings",
-    "course5": "infographics for each lesson",
     "course_info": "From the course you will learn:",
-    "first_info": "1. About changes in the body (hormonal, physiological, psychological) and nutrition of the expectant mother.",
-    "second_info": "2. Development of the baby before birth and the first year of life. Formation of the baby's personality in the intellectual and emotional sphere, mental and physical health.",
-    "third_info": "3. Communication in the family. Strategies for overcoming crises (conflictology, self-expression), relationships in the couple and the place of the father in the psychological adaptation of the child.",
+    "first_info": "About changes in the body (hormonal, physiological, psychological) and nutrition of the expectant mother.",
+    "second_info": "Development of the baby before birth and the first year of life. Formation of the baby's personality in the intellectual and emotional sphere, mental and physical health.",
+    "third_info": "Communication in the family. Strategies for overcoming crises (conflictology, self-expression), relationships in the couple and the place of the father in the psychological adaptation of the child.",
     "module_1": "Module 1. First trimester.",
     "module_1_1": "The first trimester is the basis of healthy baby development.",
     "module_1_2": "Psychological changes during pregnancy.",
@@ -47,6 +36,5 @@
     "registration_user_name": "Name",
     "registration_user_surname": "Last Name",
     "registration_user_email": "Email",
-    "registration_user_phone": "Phone",
-    "more": "Read more"
+    "registration_user_phone": "Phone"
 }

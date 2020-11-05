@@ -23,6 +23,7 @@ import '../styles/international_projects/usa.sass'
 
 import '../styles/educational_programms.sass'
 import '../styles/educational_programms/parent_school.sass'
+import '../styles/educational_programms/parent_school/health_baby.sass'
 import '../styles/educational_programms/childrens_programs.sass'
 import '../styles/educational_programms/childrens_programs/english_for_kids.sass'
 import '../styles/educational_programms/childrens_programs/the_secret_of_genius.sass'

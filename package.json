@@ -20,6 +20,7 @@
     "hyphenated": "^1.2.0",
     "hyphenated-ru": "^1.2.0",
     "i18next": "^14.0.1",
+    "jquery": "^3.5.1",
     "next": "^9.5.4",
     "next-i18next": "^6.0.3",
     "next-images": "^1.6.0",

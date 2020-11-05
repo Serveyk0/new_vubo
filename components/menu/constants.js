@@ -41,7 +41,13 @@ export const main =
         sublist: 
         [
             {
-                name: "parent_school"
+                name: "parent_school",
+                sublist:
+                [
+                    {
+                        name: "healthy_baby",
+                    }
+                ]
             },
             {
                 name: "childrens_programs",

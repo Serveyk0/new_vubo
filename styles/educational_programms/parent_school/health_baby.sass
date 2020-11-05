@@ -1,0 +1,86 @@
+@import "../../mixins/mixin_font_size"
+.health_baby
+    color: #434c5f
+    .course_info_title
+        font-family: "Rotonda"
+        @include fluidFontSize(15px, 36px, 360px, 1280px, 15px)
+    .info_block
+        grid-template-columns: repeat(auto-fit, minmax(200px, 250px))
+        grid-column-gap: 40px
+        grid-row-gap: 40px
+        align-items: normal
+        justify-content: start
+        margin-bottom: 100px
+        @media screen and ( min-width: 960px )
+            grid-template-columns: repeat(3, 1fr)
+            
+        .parent_school_text
+            grid-template-columns: min-content 1fr
+            grid-column-gap: 10px
+            display: grid
+            @include fluidFontSize(12px, 14px, 360px, 1280px, 15px)
+            text-align: justify
+            p
+                margin: 0
+                padding: 0
+                height: 30px
+                width: 30px
+                background-color: #e0342f
+                display: grid
+                justify-content: center
+                align-items: center
+                color: #fff
+                border-radius: 20px
+                span
+                    padding-top: 3px
+                    padding-left: 1px
+                    font-family: "Rotonda"
+    .modules_block
+        border: 1px solid #434c5f
+        background-color: #ffffff
+        border-radius: 30px
+        margin-top: 30px
+        margin-bottom: 30px
+        .parent_school_modules
+            padding-right: 40px
+            padding-left: 40px
+            cursor: pointer
+            ul
+                display: none
+            .parent_school_modules_item
+                margin-left: 17px
+                line-height: 2
+            .titles_grid
+                grid-template-columns: 1fr 50px
+                grid-template-rows: 1fr 1fr
+                .modules_title_1
+                    color: rgb(147, 156, 179)
+                    @include fluidFontSize(12px, 15px, 360px, 1280px, 15px)
+                    font-weight: 300
+                    margin-left: 0px
+                .modules_title_2
+                    grid-row-start: 2
+                    font-family: "Rotonda"
+                    @include fluidFontSize(14px, 28px, 360px, 1280px, 15px)
+                    letter-spacing: 1px
+                    margin-bottom: 20px
+                .modules_plus
+                    grid-row-start: 1
+                    grid-row-end: 3
+                    grid-column-start: 2
+                    background-color: #e0342f
+                    border-radius: 50px
+                    color: #ffffff
+                    font-family: "Rotonda Regular"
+                    transition: .5s
+                    @include fluidFontSize(24px, 48px, 360px, 1280px, 15px)
+                    grid-column-end: 3
+                    width: 40px
+                    height: 40px
+                    position: relative
+                    @media screen and ( max-width: 767px )
+                        width: 30px !important
+                        height: 30px !important
+
+.rotate
+    transform: rotate(45deg)

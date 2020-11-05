@@ -1,14 +1,8 @@
 import { useState } from 'react';
 import { Registration } from "../registration"
+import Link from 'next/link'
 import Head from 'next/head';
 const path = "../media/";
-const modules = 
-[
-    ["module_1", "module_1_1", "module_1_2", "module_1_3", "module_1_4", "module_1_5", ],
-    ["module_2", "module_2_1", "module_2_2", "module_2_3", "module_2_4", ],
-    ["module_3", "module_3_1", "module_3_2", "module_3_3", "module_3_4", "module_3_5", ],
-    ["module_4", "module_4_1", "module_4_2", "module_4_3", "module_4_4", "module_4_5", ],
-]
 
 export const Parent_school = ({ t }) =>
 {
@@ -20,33 +14,48 @@ export const Parent_school = ({ t }) =>
                 <meta name="description" content={"Батьківська школа"} />
             </Head>
             {show_modal ? <Registration t={t} set_show_modal={set_show_modal} /> : ""}
-            <h2 className="parent_school_title">{t("title")}</h2>
-            <p className="parent_school_text">{t("school")}</p>
-            <p className="parent_school_text">{t("online")}</p>
-            <p className="parent_school_text">{t("baby")}</p>
-            <div className="people_block">
-                <div className="people">
-                    <img src={path + "irina.jpg"} alt={t("irina")} />
-                    <p className="people_name">{t("irina")}</p>
-                    <p className="people_text">{t("psycho")}</p>
+            <div className="first_grid grid">
+                <div className="fist_grid_text margin_auto grid">
+                    <h2 className="parent_school_title padding_0 margin_0">{t("title")}</h2>
+                    <p className="parent_school_text padding_0 margin_auto">{t("school") + " " + t("online")}</p>
+                    <button className="red_button" onClick={() => set_show_modal(1)}>{t("registration")}</button>
+                </div>
+                <div className="first_grid_image grid">
+                    <img className="squares" alt="squares" src={path + "squares.png"} />
+                    <img className="sun" alt="sun" src={path + "sun.png"} />
+                    <div className="wrapper_star grid">
+                    <img className="star" alt="star" src={path + "star.png"} />
+                    </div>
                 </div>
             </div>
-            <p className="parent_school_text">{t("course")}</p>
-            <p className="parent_school_text">{t("course_info")}</p>
-            <p className="parent_school_text">{t("first_info")}</p>
-            <p className="parent_school_text">{t("second_info")}</p>
-            <p className="parent_school_text">{t("third_info")}</p>
-            {
-                modules.map((item, index) => 
-                    <ul key={index} className="parent_school_modules">
-                        {
-                            item.map((item2, index2) =>
-                                <li key={index2} className="parent_school_modules_item">{t(item2)}</li>
-                            )}
-                    </ul>
-                )
-            }
-            <button className="register_button" onClick={() => set_show_modal(1)}>{t("registration")}</button>
+
+
+            <h3 className="experts_title">{t("baby")}</h3>
+            <div className="people_block">
+                <div className="people">
+                    <div className="people_images">
+                        <img className="people_image" src={path + "irina.jpg"} alt={t("irina")} />
+                        <img className="star" alt="star" src={path + "star2.png"} />
+                    </div>
+                    <p className="people_name margin_0">{t("irina")}</p>
+                    <p className="people_text margin_0">{t("psycho")}</p>
+                    
+                </div>
+            </div>
+            <h3 className="parent_school_course">{t("course")}</h3>
+            <div className="course_blocks margin_auto grid">
+                <div className="course_block grid">
+                    <p className="parent_school_text"><span className="red_bold">14</span>{t("course2")}</p>
+                    <p className="parent_school_text"><span className="red_bold">5</span>{t("course3")}</p>
+                    <p className="parent_school_text"><span className="red_bold">+</span>{t("course4")}</p>
+                    <p className="parent_school_text"><span className="red_bold">+</span>{t("course5")}</p>
+                </div>
+                <div className="course">
+                <img className="course" alt="course image" src={path + "course.jpg"} />
+                </div>
+                <img className="sun2" alt="sun2" src={path + "sun_2.png"} />
+            </div>
+            <Link href={"healthy_baby"}><button className="red_button more">{t("more")}</button></Link>
         </div>
     )
 }
