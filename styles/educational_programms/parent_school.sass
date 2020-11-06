@@ -4,6 +4,39 @@
 .parent_school
     margin-top: 50px
     color: #434c5f
+    .course_info_title
+        font-family: "Rotonda"
+        text-align: center
+        @include fluidFontSize(15px, 36px, 360px, 1280px, 15px)
+    .info_block
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        grid-column-gap: 40px
+        grid-row-gap: 40px
+        align-items: normal
+        max-width: 900px
+        margin: 0 auto
+        justify-content: start
+        .parent_school_text
+            grid-template-columns: min-content 1fr
+            grid-column-gap: 10px
+            display: grid
+            @include fluidFontSize(12px, 14px, 360px, 1280px, 15px)
+            text-align: justify
+            p
+                margin: 0
+                padding: 0
+                height: 30px
+                width: 30px
+                background-color: #00bcd4
+                display: grid
+                justify-content: center
+                align-items: center
+                color: #fff
+                border-radius: 20px
+                span
+                    padding-top: 3px
+                    padding-left: 1px
+                    font-family: "Rotonda"
     .first_grid
         grid-template-columns: 2fr 1fr
         grid-column-gap: 30px
@@ -68,6 +101,10 @@
                     position: absolute
                     margin: 0 auto
                     margin-left: 5%
+    .course_title
+        @include fluidFontSize(20px, 48px, 360px, 1280px, 15px)
+        font-family: "Rotonda"
+        margin-top: 20px
     .experts_title
         font-family: "Rotonda"
         @include fluidFontSize(15px, 36px, 360px, 1280px, 15px)
@@ -129,6 +166,7 @@
         align-items: normal
         max-width: 1200px
         position: relative
+        overflow: hidden
         @media screen and ( max-width: 767px )
             grid-template-columns: 1fr
         .course_block
@@ -150,14 +188,14 @@
                 grid-template-columns: 35px 1fr
                 text-align: start 
                 grid-column-gap: 20px
-                @include fluidFontSize(12px, 15px, 360px, 1280px, 15px)
+                @include fluidFontSize(12px, 18px, 360px, 1280px, 15px)
                 z-index: 1
                 span
                     @include fluidFontSize(30px, 50px, 360px, 1280px, 15px)
                     text-align: center !important
                     font-family: "Rotonda"
             .red_bold
-                color: #df271c
+                color: #4caf50
         .course
             height: 350px
             border-radius: 30px
@@ -185,8 +223,9 @@
                     
         .sun2
             position: absolute
-            transform: translate(-50%, 0%)
-            -webkit-transform: translate(-50%, 0%)
+            transform: translate(-50%, 50%)
+            -webkit-transform: translate(-50%, 50%)
+            animation: spin2 40s linear infinite
             left: 50%
             bottom: -1px
 .red_button
@@ -210,3 +249,11 @@
         transform: rotate(0deg)
     100%
         transform: rotate(360deg)
+
+@keyframes spin2
+    0%
+        transform: translate(-50%, 50%) rotate(0deg)
+        -webkit-transform: translate(-50%, 50%) rotate(0deg)
+    100%
+        transform: translate(-50%, 50%) rotate(360deg)
+        -webkit-transform: translate(-50%, 50%) rotate(360deg)

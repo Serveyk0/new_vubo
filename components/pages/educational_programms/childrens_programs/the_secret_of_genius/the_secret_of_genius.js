@@ -20,8 +20,8 @@ export const The_secret_of_genius = ({ t }) =>
             t("frame") + " " + t("mnemonic") + t("quests") + second_li.map((item) => t(item))} />
             </Head>
             {show_modal ? <Registration t={t} set_show_modal={set_show_modal} /> : ""}
-            <h2 className="the_secret_of_genius_title blue text_center">{t("title")}</h2>
-            <p className="about_methodology blue text_center">{t("about")}</p>
+            <h2 className="the_secret_of_genius_title text_center">{t("title")}</h2>
+            <p className="about_methodology text_center">{t("about")}</p>
             
             <div className="the_secret_of_genius_block grid">
                 <div>
@@ -70,7 +70,7 @@ export const The_secret_of_genius = ({ t }) =>
                     }
                 </p>
                 </div>
-            <button className="register_button" onClick={() => set_show_modal(1)}>{t("registration")}</button>
+            <button className="red_button" onClick={() => set_show_modal(1)}>{t("registration")}</button>
 
             </div>
         </div>

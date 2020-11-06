@@ -43,7 +43,7 @@ const MyApp = ({ Component, pageProps }) =>
     return (<><Head>
 		<meta charSet="utf-8" />
 		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="http://vubo.org.ua/favicon.ico" />
 	</Head><Header /><Menu /><Change_language /><div className="wrapper_components"><Component {...pageProps} /></div><Footer /></>)
 }
 

@@ -36,13 +36,19 @@ export const Health_baby = ({ t }) =>
                 <title>Курс Здоровий малюк</title>
                 <meta name="description" content={"Батьківська школа"} />
             </Head>
-            <h2 className="course_info_title">{t("course_info")}</h2>
-            <div className="info_block grid">
-            <div className="parent_school_text"><p><span className="number">1</span></p>{t("first_info")}</div>
-            <div className="parent_school_text"><p><span className="number">2</span></p>{t("second_info")}</div>
-            <div className="parent_school_text"><p><span className="number">3</span></p>{t("third_info")}</div>
-            </div>
+            <div>
+            <h2 className="modules_block_title">{t("modules_title")}</h2>
             <div className="modules_block">
+            <div className="module_block_first grid">
+                <div className="module_block_first_left grid">
+                    {/* <h3 className="module_block_first_left_title"></h3> */}
+                    <img className="sun" alt="sun" src={path + "sun_3.png"} />
+                    <p className="module_block_first_left_text padding_0 margin_0">{t("school")}</p>
+                </div>
+                <div className="module_block_first_right">
+                    <p className="module_block_first_right_text">{t("online")}</p>
+                </div>
+            </div>
             {
                 modules.map((item, index) => 
                     <div key={index} className="parent_school_modules">
@@ -65,6 +71,7 @@ export const Health_baby = ({ t }) =>
                 )
             }
             </div>
+        </div>
         </div>
     )
 }

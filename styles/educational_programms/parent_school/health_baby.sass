@@ -1,48 +1,63 @@
 @import "../../mixins/mixin_font_size"
+
+.modules_block_title
+    @include fluidFontSize(15px, 36px, 360px, 1280px, 15px)
+    text-align: center
+    margin: 30px auto 20px auto
 .health_baby
     color: #434c5f
-    .course_info_title
-        font-family: "Rotonda"
-        text-align: center
-        @include fluidFontSize(15px, 36px, 360px, 1280px, 15px)
-    .info_block
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-        grid-column-gap: 40px
-        grid-row-gap: 40px
-        align-items: normal
-        max-width: 900px
-        margin: 0 auto
-        justify-content: start
-        @media screen and ( min-width: 867px )    
-            margin-bottom: 100px
-            
-        .parent_school_text
-            grid-template-columns: min-content 1fr
-            grid-column-gap: 10px
-            display: grid
-            @include fluidFontSize(12px, 14px, 360px, 1280px, 15px)
-            text-align: justify
-            p
-                margin: 0
-                padding: 0
-                height: 30px
-                width: 30px
-                background-color: #e0342f
-                display: grid
-                justify-content: center
-                align-items: center
-                color: #fff
-                border-radius: 20px
-                span
-                    padding-top: 3px
-                    padding-left: 1px
-                    font-family: "Rotonda"
     .modules_block
         border: 1px solid #434c5f
         background-color: #ffffff
         border-radius: 30px
         margin-top: 30px
         margin-bottom: 30px
+        .module_block_first
+            grid-template-columns: minmax(200px, 500px) 1fr
+            grid-gap: 20px
+            padding-bottom: 20px
+            text-align: justify
+            margin: 20px
+            border-bottom: 1px solid #cacaca
+            @media screen and ( max-width: 900px )
+                grid-template-columns: 1fr
+            .module_block_first_left
+                grid-template-columns: 60px 1fr
+                background-color: #df271c
+                color: #ffffff
+                border-radius: 25px
+                padding: 20px
+                @media screen and ( max-width: 900px )
+                    max-width: 400px
+                    padding: 20px 10px 20px 5px
+                    margin: 0 auto !important
+                    grid-template-columns: 40px 1fr
+                .module_block_first_left_title
+                    font-family: "Rotonda"
+                    @include fluidFontSize(15px, 22px, 360px, 1280px, 15px)
+                .module_block_first_left_text
+                    line-height: 1.5
+                    @include fluidFontSize(12px, 16px, 360px, 1280px, 15px)
+                    // text-align-last: center
+                    grid-column-start: 2
+                .sun
+                    animation: spin 40s linear infinite
+                    grid-column-start: 1
+                    width: 40px
+                    height: 40px
+                    @media screen and ( max-width: 900px )
+                        width: 30px
+                        height: 30px
+            .module_block_first_right
+                @media screen and ( max-width: 900px )
+                    max-width: 400px
+                    margin: 0 auto !important
+                .module_block_first_right_text
+                    letter-spacing: 1px
+                    @include fluidFontSize(12px, 14px, 360px, 1280px, 15px)
+                    line-height: 1.5
+                    margin: 20px
+                
         .parent_school_modules
             padding-right: 40px
             padding-left: 40px
@@ -75,7 +90,7 @@
                     color: #ffffff
                     font-family: "Rotonda Regular"
                     transition: .5s
-                    @include fluidFontSize(24px, 48px, 360px, 1280px, 15px)
+                    @include fluidFontSize(24px, 36px, 360px, 1280px, 15px)
                     grid-column-end: 3
                     width: 40px
                     height: 40px
@@ -84,9 +99,9 @@
                         width: 30px !important
                         height: 30px !important
                     p
-                        padding-bottom: 7px
+                        padding-top: 2px
                         @media screen and ( max-width: 900px )
-                            padding-bottom: 5px !important
+                            padding-top: 1px !important
                             
 
 .rotate

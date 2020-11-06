@@ -29,7 +29,7 @@ export const Parent_school = ({ t }) =>
                 </div>
             </div>
 
-
+            <h2 className="course_title margin_auto text_center">{t("course_title")}</h2>
             <h3 className="experts_title">{t("baby")}</h3>
             <div className="people_block">
                 <div className="people">
@@ -53,7 +53,13 @@ export const Parent_school = ({ t }) =>
                 <div className="course">
                 <img className="course" alt="course image" src={path + "course.jpg"} />
                 </div>
-                <img className="sun2" alt="sun2" src={path + "sun_2.png"} />
+                <img className="sun2" alt="sun2" src={path + "sun_3.png"} />
+            </div>
+            <h2 className="course_info_title">{t("course_info")}</h2>
+            <div className="info_block grid">
+                <div className="parent_school_text"><p><span className="number">1</span></p>{t("first_info")}</div>
+                <div className="parent_school_text"><p><span className="number">2</span></p>{t("second_info")}</div>
+                <div className="parent_school_text"><p><span className="number">3</span></p>{t("third_info")}</div>
             </div>
             <Link href={"healthy_baby"}><button className="red_button more">{t("more")}</button></Link>
         </div>
