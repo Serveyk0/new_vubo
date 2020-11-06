@@ -3,16 +3,18 @@
     color: #434c5f
     .course_info_title
         font-family: "Rotonda"
+        text-align: center
         @include fluidFontSize(15px, 36px, 360px, 1280px, 15px)
     .info_block
-        grid-template-columns: repeat(auto-fit, minmax(200px, 250px))
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
         grid-column-gap: 40px
         grid-row-gap: 40px
         align-items: normal
+        max-width: 900px
+        margin: 0 auto
         justify-content: start
-        margin-bottom: 100px
-        @media screen and ( min-width: 960px )
-            grid-template-columns: repeat(3, 1fr)
+        @media screen and ( min-width: 867px )    
+            margin-bottom: 100px
             
         .parent_school_text
             grid-template-columns: min-content 1fr
@@ -81,6 +83,11 @@
                     @media screen and ( max-width: 767px )
                         width: 30px !important
                         height: 30px !important
+                    p
+                        padding-bottom: 7px
+                        @media screen and ( max-width: 900px )
+                            padding-bottom: 5px !important
+                            
 
 .rotate
     transform: rotate(45deg)
