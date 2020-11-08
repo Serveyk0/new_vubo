@@ -1,7 +1,10 @@
 {
-    "oksana_name": "Оксана",
-    "oksana_profession": "Ректор",
-    "oksana_phone": "+1234567890",
+    "katya_name": "Рязанцева Екатерина",
+    "katya_profession": "Председатель правления",
+    "katya_email": "kariazantseva@gmail.com",
+    "yulya_name": "Бараненко Юлия",
+    "yulya_profession": "Директор",
+    "yulya_email": "baranenko.julia21@gmail.com",
     "contacts_address": "Адрес",
     "contacts_prospect": "Голосеевский проспект",
     "contacts_metro": "Метро Голосеевская",

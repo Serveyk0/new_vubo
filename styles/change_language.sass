@@ -7,6 +7,8 @@
     justify-content: end
     max-width: 32px
     max-height: 32px
+    @media screen and ( max-width: 767px )
+        right: 0
     .change_language_wrapper
         padding-top: 5px    
         -webkit-transform-origin: 0 15%
@@ -50,7 +52,8 @@
     transform: scale(1) !important
 
 .change_language_image_active
-    margin: 0 !important
+    @media screen and ( min-width: 768px )
+        margin: 0 !important
 
 .change_language_active
     z-index: 1

@@ -3,6 +3,11 @@
 @import "./keyframes/keyframeLogoAnimation"
 .header
     grid-template-columns: 1fr 1fr 1fr
+    -webkit-text-stroke-color: black
+    -webkit-text-stroke-width: .03em
+    text-shadow: 3px 4px 3px #5e91b76b
+    // font-family: 'Montserrat'
+    font-family: 'Slabo 27px', serif !important
     height: 100px
     .header_left
         justify-content: end
@@ -19,21 +24,21 @@
     .header_right
         justify-content: start
         text-align: start
-        margin: 0 auto
     .header_left,
     .header_right
         display: grid
         grid-template-rows: 1fr 0 1fr
         font-weight: 700
-        @include fluidFontSize(15px, 24px, 300px, 1920px, 18px)
+        @include fluidFontSize(15px, 30px, 300px, 1920px, 18px)
         @media screen and ( max-width: 360px )
             display: none !important
         .header_top
-            color: #999999
+            color: #7bb3dc
         .header_bottom
-            color: #777777
+            color: #5e91b7
         .header_top,
         .header_bottom
+            padding: 3px 5px
             -webkit-clip-path: polygon(100% 0,100% 100%,0 100%,0 80%)
             clip-path: polygon(100% 0,100% 100%,0 100%,0 80%)
             transform: translateY(-50px)
@@ -48,5 +53,5 @@
             &:first-child
                 animation-delay: 2.1s
             &:last-of-type
-                color: #777
+                color: #5e91b7
                 animation-delay: 2.3s

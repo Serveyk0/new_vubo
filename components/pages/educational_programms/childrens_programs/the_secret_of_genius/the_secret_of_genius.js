@@ -25,7 +25,13 @@ export const The_secret_of_genius = ({ t }) =>
             
             <div className="the_secret_of_genius_block grid">
                 <div>
+            <div className="natali">
             <img className="the_secret_of_genius_images" src={ path + "natali.jpg"} alt={t("title")} />
+            <div className="natali_text">
+                <p className="natali_title_1">{t("natali")}</p>
+                <p className="natali_title_2">{t("natali_2")}</p>
+            </div>
+            </div>
                 <p>
                     <span className="bold italic">{"«" + t("title") + "»"}</span>
                     {t("unique")}
@@ -45,7 +51,7 @@ export const The_secret_of_genius = ({ t }) =>
                 </div>
                 <div>
                 <p>
-                    <span className="bold">{t("developing")}</span>
+                <h2 className="subtitle"><span className="bold">{t("developing")}</span></h2>
                     {
                         li.map((item, index) => <li key={index} className="bold li_dot">{t(item)}</li>)
                     }
@@ -61,10 +67,12 @@ export const The_secret_of_genius = ({ t }) =>
                     <span className="bold">{t("join")}</span>
                 </p>
                 <p>
-                    <span className="bold">{t("complect")}</span>
-                    {t("methods")}
-                    <span className="bold">{t("«" + t("title") + "» ")}</span>
-                    {t("includes")}
+                    <h2 className="subtitle">
+                        <span className="bold">{t("complect")}</span>
+                        {t("methods")}
+                        <span className="bold">{t("«" + t("title") + "» ")}</span>
+                        {t("includes")}
+                    </h2>
                     {
                         second_li.map((item, index) => <li key={index} className="li_dot">{t(item)}</li>)
                     }

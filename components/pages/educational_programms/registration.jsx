@@ -78,7 +78,7 @@ const handleSubmit = async (e) => {
             {registrationFrom.map((registrationItem, registrationIndex) => { return (
                 <div className='inputBlock' key={registrationIndex}><input className='formInput' type={registrationItem.type} value={registrationItem.name} onChange={(e) => handleChange(e, registrationItem.set)} placeholder={t('registration_user_' + registrationItem.name1)} /></div>
             )})}
-            <button className="registerButt" onClick={handleSubmit}>{t('registration_user_register')}</button>
+            <button className="red_button" onClick={handleSubmit}>{t('registration_user_register')}</button>
         </div>            
     </section>
     )

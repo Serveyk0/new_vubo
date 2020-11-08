@@ -1,6 +1,10 @@
 @import "../mixins/mixin_font_size"
 @import "../mixins/mixin_images"
 
+
+// $button_color: #df271c
+$button_color: #5e91b7
+
 .parent_school
     margin-top: 50px
     color: #434c5f
@@ -68,6 +72,8 @@
             grid-template-rows: 25% 37.5% 37.5%
             @media screen and ( max-width: 576px )
                 margin-right: 50px
+            @media screen and ( max-width: 959px )
+                margin-top: 60px
             .squares
                 max-width: 400px
                 grid-column-start: 1
@@ -77,16 +83,17 @@
                 grid-row-start: 1
                 grid-row-end: 4
                 @media screen and ( max-width: 576px )
-                    max-width: 260px !important
+                    max-width: 100% !important
             .sun
                 grid-column-start: 3
                 animation: spin 40s linear infinite
                 grid-row-start: 1
                 grid-row-end: 3
                 width: 85%
-                margin-left: 50%
+                margin-left: 65%
+                margin-top: -30%
             .wrapper_star
-                grid-column-start: 3
+                grid-column-start: 1
                 grid-column-end: 5
                 grid-row-start: 3
                 z-index: 1
@@ -166,6 +173,7 @@
         align-items: normal
         max-width: 1200px
         position: relative
+        border-radius: 30px
         overflow: hidden
         @media screen and ( max-width: 767px )
             grid-template-columns: 1fr
@@ -234,7 +242,7 @@
     font-size: 15px
     // font-family: 'Rotonda',Arial,sans-serif
     border-radius: 400px
-    background-color: #df271c
+    background-color: $button_color
     outline: none
     border: 0
     padding: 13px 60px

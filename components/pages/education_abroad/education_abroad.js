@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
 
-const educatinAbroad = ['distance_education', 'spanish_language', 'bachelors', 'masters'];
+const educatinAbroad = ['distance_education', 'spanish_language', 'bachelors' ];
 
 const path="../media/";
 export const Education_abroad = ({ t }) =>

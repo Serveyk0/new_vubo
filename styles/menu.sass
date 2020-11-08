@@ -1,3 +1,11 @@
+// $href_bg: #f0f8ff
+// $href_bg: #f9d3b3
+$href_bg: #ffe7d3
+// $href_bg: #dee9f1
+$active_menu: #ffd4ab
+$border_color: #999999
+    
+    
 .burger
     top: calc(50% - 12px)
     position: fixed
@@ -179,24 +187,25 @@
             .third_sublist
                 display: grid !important
             .second_sub_how
-                background-color: #eeddcf
+                background-color: $active_menu
         .third_sub_how
             &:hover
-                background-color: #eeddcf
+                background-color: $active_menu
 
 
 .third_sublist
     display: none
     margin-left: 15px
 
+
 .menu_list_item_href_wrapper
     @media screen and ( min-width: 768px )    
         height: 40px
         padding: 0
         width: 100%
-        border: 2px solid #eeddcf
+        border: 2px solid $border_color
         color: #988779
-        background-color: #f0f8ff
+        background-color: $href_bg
         grid-area: 1/1
         display: flex
         justify-content: center
@@ -211,7 +220,7 @@
 
 
 .active_menu
-    background-color: #eeddcf
+    background-color: $active_menu
     @media screen and ( max-width: 768px )
         background-color: #2b426b
         

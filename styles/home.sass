@@ -1,6 +1,7 @@
 @import "./mixins/mixin_font_size.sass"
 @import "./mixins/mixin_images"
 
+
 .mainText
     display: grid
     max-width: 1000px
@@ -8,6 +9,7 @@
     border-bottom: 1px solid #c5c5c5
     .mainTextTitle
         text-transform: uppercase
+        font-family: 'Slabo 27px', serif !important
         text-align: center
         @include fluidFontSize(15px, 20px, 300px, 1256px, 18px)
     .educationImage
@@ -234,7 +236,8 @@
     margin-bottom: 30px
     border-top: 1px solid #c5c5c5
 
-
+.react-multiple-carousel__arrow
+    z-index: 1 !important
 
 @keyframes sheen
   0%

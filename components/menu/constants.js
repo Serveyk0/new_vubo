@@ -31,9 +31,9 @@ export const main =
             {
                 name: "bachelors"
             },
-            {
-                name: "masters"
-            },
+            // {
+            //     name: "masters"
+            // },
         ]
     },
     {

@@ -21,7 +21,7 @@ export const Parent_school = ({ t }) =>
                     <button className="red_button" onClick={() => set_show_modal(1)}>{t("registration")}</button>
                 </div>
                 <div className="first_grid_image grid">
-                    <img className="squares" alt="squares" src={path + "squares.png"} />
+                    <img className="squares" alt="squares" src={path + "huggy.jpg"} />
                     <img className="sun" alt="sun" src={path + "sun.png"} />
                     <div className="wrapper_star grid">
                     <img className="star" alt="star" src={path + "star.png"} />
