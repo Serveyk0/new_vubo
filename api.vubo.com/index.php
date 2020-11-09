@@ -1,5 +1,6 @@
 <?php
 
+ini_set("allow_url_fopen", 1);
 
 define('TELEGRAM_TOKEN', '1038348680:AAHE-HM-9NGOq6D0pV0ZLoLJYi2MjhWTk2o');
 define('TELEGRAM_CHATID', '-497447602');
@@ -31,13 +32,13 @@ $resp = file_get_contents("https://api.telegram.org/bot{$botApiToken}/sendMessag
     $phone  = isset($_GET['phone']) ? $_GET['phone'] : "";
     $text = isset($_GET['text']) ? $_GET['text'] : "";
 
-    if($name && $email){
+    if($name){
         require 'vendor/autoload.php';
 
         $mail = new PHPMailer(true);
         try{
-            $text = 'Имя: ' . $name . "\nФамилия: " . $surname . "\nEmail: " . $email . ( strcasecmp($phone, "") ? ("\nТелефон: " . $phone) : "") . "\n\nПовідомлення: " . $text;
-            echo message_to_telegram($text);
+            $text2 = 'Имя: ' . $name . "\nФамилия: " . $surname . "\nEmail: " . $email . ( strcasecmp($phone, "") ? ("\nТелефон: " . $phone) : "") . "\n\nПовідомлення: " . $text;
+            echo message_to_telegram($text2);
             $mail->isSMTP();                                     
             $mail->Host       = 'smtp.gmail.com';                
             $mail->SMTPAuth   = true;                             
@@ -47,11 +48,12 @@ $resp = file_get_contents("https://api.telegram.org/bot{$botApiToken}/sendMessag
             $mail->Port       = 587;
 
             $mail->setFrom('serveyko.sites.test@gmail.com', 'Contact form');
-            $mail->addAddress("maximum.lenovo.ml@gmail.com");   
+            $mail->addAddress("openbusinessedu@gmail.com");  
+            $mail->addAddress("kuprienkosofia132@gmail.com");  
 
             $mail->isHTML(true);   
-            $mail->Subject = 'Contact form';
-            $body = 'Имя: ' . $name . "<br>Фамилия: " . $surname . "<br>Email: " . ( (strcasecmp($phone, "") || $phone == null) ? ("<br>Телефон: " . $phone) : "") . "<br><br>" . $text;
+            $mail->Subject = 'VUBO MESSAGE';
+            $body = 'Имя: ' . $name . "<br>Фамилия: " . $surname . "<br>Email: " . $email . ( (strcasecmp($phone, "") || $phone == null) ? ("<br>Телефон: " . $phone) : "") . "<br><br>" . $text;
             $mail->Body    = $body;
 
             if($mail->send()){
