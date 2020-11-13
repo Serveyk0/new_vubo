@@ -1,0 +1,111 @@
+@import "../../mixins/mixin_font_size"
+@import "../../mixins/mixin_images"
+
+.english_for_kids
+    margin-bottom: 30px
+    text-align: justify
+    .left_img
+        float: left
+        shape-outside: circle(50%)
+        clip-path: circle(60%)
+        padding-right: 20px
+        width: 70px
+        @media screen and ( max-width: 768px )
+            clip-path: circle(65%) !important
+            width: 55px !important
+    .none_indent
+        text-indent: 0px !important
+    .english_title
+        font-family: "Rotonda"
+        text-align: center
+        @include fluidFontSize(15px, 24px, 360px, 1280px, 15px)
+    .english_text
+        text-indent: 1.5em
+        @include fluidFontSize(12px, 18px, 360px, 1280px, 15px)
+    .course_blocks
+        grid-template-columns: repeat(2, 50%)
+        align-content: normal
+        align-items: normal
+        max-width: 1200px
+        position: relative
+        border-radius: 30px
+        overflow: hidden
+        @media screen and ( max-width: 767px )
+            grid-template-columns: 1fr
+        .course_block
+            background-color: #ffffff
+            border-radius: 30px
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+            grid-gap: 10px
+            padding: 10px
+            @media screen and ( max-width: 767px )
+                grid-row-start: 2
+                .margin_right_english
+                    margin-left: 50px
+                    max-width: calc(100% - 100px)      
+            @media screen and ( max-width: 440px )
+                grid-template-columns: 1fr
+                grid-template-rows: repeat(4, 1fr)    
+            .parent_school_text
+                display: grid
+                align-items: center
+                justify-content: center
+                grid-template-columns: 35px 1fr
+                text-align: start 
+                grid-column-gap: 20px
+                @include fluidFontSize(12px, 18px, 360px, 1280px, 15px)
+                z-index: 1
+                span
+                    @include fluidFontSize(30px, 50px, 360px, 1280px, 15px)
+                    text-align: center !important
+                    font-family: "Rotonda"
+            .red_bold
+                color: #4caf50
+        .course
+            height: 350px
+            border-radius: 30px
+            img
+                width: auto
+                height: 100%
+            @media screen and ( max-width: 1050px ) and ( min-width: 900px )
+                height: 300px
+            @media screen and ( max-width: 899px )
+                height: 235px
+            @media screen and ( max-width: 767px ) and ( min-width: 650px )
+                height: 400px
+                img
+                    width: 100% 
+            @media screen and ( max-width: 649px ) and ( min-width: 570px )
+                height: 350px
+            @media screen and ( max-width: 569px ) and ( min-width: 480px )
+                height: 300px
+            @media screen and ( max-width: 479px ) and ( min-width: 390px )
+                height: 240px
+            @media screen and ( max-width: 389px ) and ( min-width: 330px )
+                height: 220px
+            @media screen and ( max-width: 329px ) and ( min-width: 0px )
+                height: 200px
+                    
+        .sun2
+            position: absolute
+            transform: translate(-50%, 50%)
+            -webkit-transform: translate(-50%, 50%)
+            animation: spin2 40s linear infinite
+            left: 50%
+            bottom: -1px
+
+.margin_paragraph
+    @media screen and ( min-width: 768px )
+        margin-bottom: 30px
+
+.quote_cherchil
+    color: #2070c0
+
+.cherchil
+    text-align: end
+    color: #2070c0
+
+.essey
+    @media screen and ( max-width: 440px )
+        grid-row-start: 4

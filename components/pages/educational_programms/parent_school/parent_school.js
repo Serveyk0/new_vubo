@@ -45,10 +45,10 @@ export const Parent_school = ({ t }) =>
             <h3 className="parent_school_course">{t("course")}</h3>
             <div className="course_blocks margin_auto grid">
                 <div className="course_block grid">
-                    <p className="parent_school_text"><span className="red_bold">14</span>{t("course2")}</p>
-                    <p className="parent_school_text"><span className="red_bold">5</span>{t("course3")}</p>
-                    <p className="parent_school_text"><span className="red_bold">+</span>{t("course4")}</p>
-                    <p className="parent_school_text"><span className="red_bold">+</span>{t("course5")}</p>
+                    <p className="parent_school_text margin_right_english"><span className="red_bold">14</span>{t("course2")}</p>
+                    <p className="parent_school_text margin_right_english"><span className="red_bold">5</span>{t("course3")}</p>
+                    <p className="parent_school_text margin_right_english"><span className="red_bold">+</span>{t("course4")}</p>
+                    <p className="parent_school_text margin_right_english"><span className="red_bold">+</span>{t("course5")}</p>
                 </div>
                 <div className="course">
                 <img className="course" alt="course image" src={path + "course.jpg"} />
